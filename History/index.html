@@ -13,25 +13,72 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #f1f1f1;
+    background-color: #F3F3F1;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+    min-width: 100%;
 }
-.header {
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    text-align: center;
+.parallax {
+    min-height: 75vh;
+    display: grid;
+    grid-template-areas: "stack";
 
+    & > * {
+        grid-area: stack;
+    }
+    .header {
+        width: 100%;
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #F3F3F1;
+    }
+
+    .parallax-background {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .parallax-foreground {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .mainBx {
+        top: 100%;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
 }
+
 </style>
 </head>
 <body>
+<div class="parallax">
+
     <div class="header">
-        <h1>History</h1>
+        <h1>JAPAN</h1>
+        <p>Unveiling Centuries of History</p>
     </div>
+
+    <img class="parallax-background" src="Assets/Images/scenery-1.jpg">
+    <img class="parallax-foreground"  src="Assets/Images/hill-1.png">
+
+    <div class="mainBx">
+        <div class="textBx">
+            
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
