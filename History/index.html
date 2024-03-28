@@ -21,6 +21,8 @@ body {
     min-height: 75vh;
     display: grid;
     grid-template-areas: "stack";
+    display: flex;
+    justify-content: center;
 
     & > * {
         grid-area: stack;
@@ -30,56 +32,40 @@ body {
     .header {
         top: 240px;
         position: absolute;
-        width: 100%;
+        width: 30%;
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 4rem;
+        font-size: 6rem;
         font-weight: 700;
         color: #BC3C2D;
         z-index: 0;
-        --parallax-speed: -4;
+        --parallax-speed: -18;
 
-        .btnGrp {
-            button {
-                margin-top: 20px;
-                padding: 10px 20px;
-                font-size: 1.5rem;
-                color: #F7EBDB;
-                background-color: #BC3C2D;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-            #_btn1 {
-                background-color: #BC3C2D;   
-            }
+        h1 {   
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
     }
-
     .parallax-background {
-        top: -10%;
+        top: -100px;
         position: absolute;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
         z-index: -1;
-        --parallax-speed: -5;    
+        --parallax-speed: -15;    
     }
-
     .parallax-foreground {
-        top: 65%;
+        top: 580px;
         position: absolute;
         width: 100%;
-        object-fit: cover;     
-        bottom: 0;
         z-index: 1;
     }
-
-    .mainBx {
-        top: 100%;
+    .timeline {
+        top: 900px;
         position: absolute;
         background-color: #000;
         padding: 240px 280px;
@@ -97,12 +83,169 @@ body {
             text-align: center;
         }
 
-        p {
-            font-size: 1.5rem;
+        .cards {
+            border-top: 1px solid #F7EBDB;
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 20px 10px 240px 10px;
+            overflow-x: auto;
             text-align: center;
+            color: #F7EBDB; 
+
+            .card {
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                width: 120px;
+                height: 220px;
+                background-color: #292E32;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                margin: 0 6px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+                    filter: none;
+
+                }
+
+                &:active {
+                    transform: scale(1);
+                }
+            }
+
+            #_card1 {
+                background-image: url(https://doyouknowjapan.com/image/history/kyusekki.jpg);
+            }
+            #_card2 {
+                background-image: url(https://doyouknowjapan.com/image/history/yayoi.jpg);
+            }
+            #_card3 {
+                background-image: url(https://doyouknowjapan.com/image/history/aska.jpg);
+            }
+            #_card4 {
+                background-image: url(https://doyouknowjapan.com/image/history/kamakura.jpg);
+            }
+            #_card5 {
+                background-image: url(https://doyouknowjapan.com/image/history/nanbokucho.jpg);
+            }
+            #_card6 {
+                background-image: url(https://doyouknowjapan.com/image/history/azuchi-momoyama.jpg);
+            }
+            #_card7 {
+                background-image: url(https://doyouknowjapan.com/image/history/meiji.jpg);
+            }
+            #_card8 {
+                background-image: url(https://doyouknowjapan.com/image/history/taisho.jpg);
+            }
+            #_card9 {
+                background-image: url(https://doyouknowjapan.com/image/history/showa.jpg);
+            }
         }
     }
-}
+    .contents {
+        top: 1820px;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 6;
+
+        img {
+            width: 40%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .textBx {
+            padding: 20px;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            h2 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        #_period1, #_period2, #_period3, #_period4, #_period5, 
+        #_period6, #_period7, #_period8, #_period9{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;       
+            padding: 50px 140px; 
+        }
+
+        #_period1 {
+            background-color: #0A1018;    
+            color: #F7EBDB; 
+        }
+        #_period2 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+        #_period3 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+        #_period4 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;  
+            text-align: right; 
+        }
+        #_period5 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+        #_period6 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+        #_period7 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+        #_period8 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+        #_period9 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+
+    }
+} 
 
 @keyframes parallaxY {
     to {
@@ -124,27 +267,161 @@ body {
 
     <div class="header">
         <h1>JAPAN</h1>
-        <p>Unveiling Centuries of History</p>
-        <div class="btnGrp">
-            <button id="_btn1">Timeline</button>
-        </div>
     </div>
 
     <img class="parallax-background" src="https://i.etsystatic.com/36181410/r/il/f5da16/4775298537/il_fullxfull.4775298537_2rnt.jpg">
     <img class="parallax-foreground"  src="Assets/Images/hill-1.png">
 
-    <div class="mainBx">
+    <div class="timeline">
         <div class="textBx">
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
-            </p>
+            <h1>Timeline</h1>
+            <div class="cards">
+                <div class="card" id="_card1" onclick="scroll1()">
+                    Before 14,000 BC - 300 BC
+                </div>
+                <div class="card" id="_card2" onclick="scroll2()"> 
+                    300 BC - 538
+                </div>
+                <div class="card" id="_card3" onclick="scroll3()">
+                    538 - 794
+                </div>
+                <div class="card" id="_card4" onclick="scroll4()">
+                    794 - 1336
+                </div>
+                <div class="card" id="_card5" onclick="scroll5()">
+                    1336 - 1590
+                </div>
+                <div class="card" id="_card6" onclick="scroll6()">
+                    1467 - 1603
+                </div>
+                <div class="card" id="_card7" onclick="scroll7()">
+                    1603 - 1912
+                </div>
+                <div class="card" id="_card8" onclick="scroll8()">
+                    1912 - 1989
+                </div>
+                <div class="card" id="_card9" onclick="scroll9()">
+                    1989 - PRESENT
+                </div>
+            </div>
         </div> 
     </div>
 
+    <div class="contents">
+
+        <div class="contentBx" id="_period1">
+            <div class="textBx">
+                <h1>HEISEI PERIOD</h1>
+                <h2>(1989 - PRESENT)</h2>
+                <p>During the Heisei period (1989-present), Japan experienced the collapse of the bubble economy, 
+                    followed by a prolonged period of economic stagnation known as the "lost decades." 
+                    Political changes included the end of the cold war state, leading to the collapse of the 
+                    longstanding Libperiodl Democratic Party dominance and the emergence of diverse coalition governments.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period2">
+            <div class="textBx">
+                <h1>TAISHO & SHOWA PERIODS</h1>
+                <h2> (1912 - 1989)</h2>
+                <p>The Taisho period saw a shift towards democracy and economic challenges post-war, including the 
+                    Great Kanto Earthquake. The Showa period witnessed significant turmoil, including economic instability, 
+                    militarization, involvement in World War II, and subsequent occupation by GHQ. However, Japan underwent 
+                    remarkable post-war recovery, transitioning into a major economic power characterized by rapid growth, 
+                    political stability, and the emergence of the bubble economy in the 1980s.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period3">
+            <div class="textBx">
+                <h1>EDO & MEIJI PERIODS</h1>
+                <h2>(1603 - 1912)</h2>
+                <p>The Edo period centralized power under the Tokugawa bakufu, fostering cultural growth despite social 
+                    unrest. The Meiji period modernized Japan, establishing Western systems and expanding its global 
+                    influence through victories and reforms.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period4">
+            <div class="textBx">
+                <h1>PERIOD OF WARRING STATES <br> & AZUCHI-MOMOYAMA PERIOD</h1> 
+                <h2>(1467 - 1603)</h2>
+                <p>The Sengoku period featured powerful daimyo establishing regional control, transforming warfare with 
+                    European trade and Christianity. Hideyoshi Toyotomi's reign in the Azuchi-Momoyama period unified Japan, 
+                    fostering Momoyama culture.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period5">
+            <div class="textBx">
+                <h1>NANBOKUCHO & MUROMACHI PERIODS</h1>
+                <h2>(1336 - 1590)</h2>
+                <p>The Nanbokucho period witnessed Imperial Court division and cultural trends like extravagant behavior 
+                    and poetry. The Muromachi period saw conflicts between the bakufu and Shugo daimyo, leading to the 
+                    Sengoku period marked by social unrest and village community independence.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period6">
+            <div class="textBx">
+                <h1>HEIAN & KAMAKURA PERIODS</h1>
+                <h2>(794 - 1336)</h2>
+                <p>Heian-kyo became the capital during the Heian period, fostering cultural blossoming and samurai 
+                    influence. The Kamakura period saw the rise of the Kamakura bakufu, introducing military dominance 
+                    and social changes like a monetary economy.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period7">
+            <div class="textBx">
+                <h1>ASUKA & NARA PERIODS</h1>
+                <h2>(538 - 794)</h2>
+                <p>In the Asuka period, Japan stabilized under Yamato sovereignty amid Imperial succession disputes, 
+                    adopting Buddhism and implementing political reforms. The Nara period centralized power under 
+                    Emperor Shomu, expanding the state system and patronizing cultural works while integrating neighboring 
+                    regions like Silla and Emishi.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period8">
+            <div class="textBx">
+                <h1>YAYOI & TUMULUS PERIODSS</h1>
+                <h2>(300 BC - 538)</h2>
+                <p>During the Yayoi period, Japan shifted to agriculture, spreading rice cultivation and building large 
+                    settlements with hiperiodrchical structures. The Kofun period introduced keyhole-shaped tomb mounds under 
+                    Yamato sovereignty, influenced by Korean and Chinese cultures.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+        <div class="contentBx" id="_period9">
+            <div class="textBx">
+                <h1>PALEOLITHIC & JOMON PERIODS</h1>
+                <h2>(Before 14,000 BC - 300 BC)</h2>
+                <p>Between 30,000 to 100,000 years ago, early humans settled in Japan, initially adopting knife-type stone 
+                    tools from Northern China. Microblades, introduced around 20,000 years ago from Siberia, gradually replaced 
+                    knife-based tools, becoming widespread by 15,000 years ago. During the 12,000-year Jomon Period, Jomon-style 
+                    earthenware emerged alongside fixed settlements like pit dwellings, and communities relied on hunting, 
+                    fishing, and gathering. The end of the ice age around 12,000 years ago led to rising sea levels, isolating 
+                    Japan and initiating the Jomon period, characterized by significant changes in lifestyle and culture. In smaller 
+                    southeastern islands, life mirrored the Paleolithic period initially but evolved with the introduction of shell 
+                    mound culture around 60,000 years ago, lasting until the end of the Heian period.
+                </p>
+            </div>
+            <img src="Assets/Images/">
+        </div>
+
+    </div>
+
+<script src="Assets/JS/script.js"></script>
 </div>
+
 </body>
 </html>
