@@ -24,39 +24,96 @@ body {
 
     & > * {
         grid-area: stack;
+        animation: parallaxY linear;
+        animation-timeline: scroll();
     }
     .header {
-        width: 100%;
+        top: 240px;
         position: absolute;
-        height: 100vh;
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 700;
-        color: #F3F3F1;
+        color: #BC3C2D;
+        z-index: 0;
+        --parallax-speed: -4;
+
+        .btnGrp {
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                font-size: 1.5rem;
+                color: #F7EBDB;
+                background-color: #BC3C2D;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            #_btn1 {
+                background-color: #BC3C2D;   
+            }
+        }
     }
 
     .parallax-background {
+        top: -10%;
+        position: absolute;
         width: 100%;
         object-fit: cover;
+        z-index: -1;
+        --parallax-speed: -5;    
     }
 
     .parallax-foreground {
-        width: 100%;
-        object-fit: cover;
+        top: 65%;
         position: absolute;
+        width: 100%;
+        object-fit: cover;     
         bottom: 0;
+        z-index: 1;
     }
 
     .mainBx {
         top: 100%;
         position: absolute;
         background-color: #000;
+        padding: 240px 280px;
         width: 100%;
-        height: 100%;
+        height: 940px;
         z-index: 5;
+        color: #F7EBDB;
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+
+@keyframes parallaxY {
+    to {
+        transform: 
+            translateY(calc(var(--parallax-speed) * -200px));
+    }
+}
+@keyframes parallaxX {
+    to {
+        transform: 
+            translateX(calc(var(--parallax-speed) * -200px));
     }
 }
 
@@ -68,15 +125,24 @@ body {
     <div class="header">
         <h1>JAPAN</h1>
         <p>Unveiling Centuries of History</p>
+        <div class="btnGrp">
+            <button id="_btn1">Timeline</button>
+        </div>
     </div>
 
-    <img class="parallax-background" src="Assets/Images/scenery-1.jpg">
+    <img class="parallax-background" src="https://i.etsystatic.com/36181410/r/il/f5da16/4775298537/il_fullxfull.4775298537_2rnt.jpg">
     <img class="parallax-foreground"  src="Assets/Images/hill-1.png">
 
     <div class="mainBx">
         <div class="textBx">
-            
-        </div>
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget
+            </p>
+        </div> 
     </div>
 
 </div>
