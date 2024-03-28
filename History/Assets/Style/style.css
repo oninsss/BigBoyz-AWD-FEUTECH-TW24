@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #F3F3F1;
+    height: 100vh;
+    min-width: 100%;
+}
+.parallax {
+    position: inherit;
+    min-height: 75vh;
+    display: grid;
+    grid-template-areas: "stack";
+    display: flex;
+    justify-content: center;
+
+    & > * {
+        grid-area: stack;
+        animation: parallaxY linear;
+        animation-timeline: scroll();
+    }
+    .header {
+        top: 120px;
+        left: 50%;
+        position: absolute;
+        width: 30%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 7rem;
+        font-weight: 700;
+        color: #BC3C2D;
+        z-index: 0;
+        --parallax-speed: -15;
+
+        h1 {   
+            font-family: "Macondo", cursive;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    .parallax-background {
+        top: -100px;
+        position: absolute;
+        width: 100%;
+        object-fit: contain;
+        z-index: -1;
+        --parallax-speed: -24;    
+    }
+    .parallax-background-dojo {
+        top: -120px;
+        left: -80px;
+        position: absolute;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+        --parallax-speed: -18;    
+    }
+    .timeline {
+        top: 960px;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 940px;
+        z-index: 5;
+        color: #F7EBDB;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .parallax-foreground {
+            top: -35%;
+            position: relative;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+        .textBx {        
+            top: -10%;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .cards {
+                border-top: 1px solid #F7EBDB;
+                width: 60%;
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 20px 10px 240px 10px;
+                overflow-x: auto;
+                text-align: center;
+                color: #F7EBDB; 
+
+                .card {
+                    background-attachment: fixed;
+                    background-size: cover;
+                    background-position: center;
+                    width: 120px;
+                    height: 220px;
+                    background-color: #292E32;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    margin: 0 6px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+                        filter: none;
+
+                    }
+
+                    &:active {
+                        transform: scale(1);
+                    }
+                }
+
+                #_card1 {
+                    background-image: url(https://doyouknowjapan.com/image/history/kyusekki.jpg);
+                }
+                #_card2 {
+                    background-image: url(https://doyouknowjapan.com/image/history/yayoi.jpg);
+                }
+                #_card3 {
+                    background-image: url(https://doyouknowjapan.com/image/history/aska.jpg);
+                }
+                #_card4 {
+                    background-image: url(https://doyouknowjapan.com/image/history/kamakura.jpg);
+                }
+                #_card5 {
+                    background-image: url(https://doyouknowjapan.com/image/history/nanbokucho.jpg);
+                }
+                #_card6 {
+                    background-image: url(https://doyouknowjapan.com/image/history/azuchi-momoyama.jpg);
+                }
+                #_card7 {
+                    background-image: url(https://doyouknowjapan.com/image/history/meiji.jpg);
+                }
+                #_card8 {
+                    background-image: url(https://doyouknowjapan.com/image/history/taisho.jpg);
+                }
+                #_card9 {
+                    background-image: url(https://doyouknowjapan.com/image/history/showa.jpg);
+                }
+            }
+        }
+    }
+    .contents {
+        top: 1820px;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 6;
+
+        img {
+            width: 40%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .textBx {
+            padding: 20px;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            h2 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        #_period1, #_period2, #_period3, #_period4, #_period5, 
+        #_period6, #_period7, #_period8, #_period9{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;       
+            padding: 50px 140px; 
+        }
+
+        #_period1 {
+            background-color: #0A1018;    
+            color: #F7EBDB; 
+        }
+        #_period2 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+        #_period3 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+        #_period4 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;  
+            text-align: right; 
+        }
+        #_period5 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+        #_period6 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+        #_period7 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+        #_period8 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+        #_period9 {
+            background-color: #0A1018;    
+            color: #F7EBDB;   
+        }
+
+    }
+} 
+
+@keyframes parallaxY {
+    to {
+        transform: 
+            translateY(calc(var(--parallax-speed) * -200px));
+    }
+}
+@keyframes parallaxX {
+    to {
+        transform: 
+            translateX(calc(var(--parallax-speed) * -200px));
+    }
+}
+
+@media (max-width: 1440px) {
+    .parallax {
+        .header {
+            font-size: 5rem;
+        }
+        .parallax-background {
+            top: -10px;
+        }
+        .parallax-background-dojo {
+            top: 10px;
+        }
+        .timeline {
+            top: 800px;
+
+            .parallax-foreground {
+                top: -30%;
+            }
+
+            .textBx {
+                top: -10%;
+            }         
+        }
+    }   
+}
+
+@media (max-width: 1024px) {
+    .parallax {
+        .header {
+            font-size: 4rem;
+        }
+        .timeline {
+            top: 600px;
+
+            .parallax-foreground {
+                top: -30%;
+            }
+
+            .textBx {
+                top: -10%;
+            }         
+        }
+    }   
+}
