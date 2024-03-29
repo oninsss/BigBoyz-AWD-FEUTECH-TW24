@@ -7,9 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #F3F3F1;
+    background-color: #FEFEFC;
     height: 100vh;
     min-width: 100%;
+
 }
 .parallax {
     position: inherit;
@@ -50,7 +51,7 @@ body {
         top: -100px;
         position: absolute;
         width: 100%;
-        object-fit: contain;
+
         z-index: -1;
         --parallax-speed: -24;    
     }
@@ -99,9 +100,8 @@ body {
 
             .cards {
                 border-top: 1px solid #F7EBDB;
-                width: 60%;
+                width: 70%;
                 display: flex;
-                flex-wrap: nowrap;
                 padding: 20px 10px 240px 10px;
                 overflow-x: auto;
                 text-align: center;
@@ -111,7 +111,7 @@ body {
                     background-attachment: fixed;
                     background-size: cover;
                     background-position: center;
-                    width: 120px;
+                    width: 160px;
                     height: 220px;
                     background-color: #292E32;
                     display: flex;
@@ -131,6 +131,13 @@ body {
 
                     &:active {
                         transform: scale(1);
+                    }
+
+                    p {
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        color: #F7EBDB;
+                        font-size: 0.8rem;
                     }
                 }
 
@@ -175,9 +182,17 @@ body {
         align-items: center;
         z-index: 6;
 
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
         img {
             width: 40%;
-            height: 100%;
+            height: auto;
             object-fit: contain;
         }
 
@@ -191,13 +206,17 @@ body {
             align-items: center;
 
             h1 {
+                width: 100%;
+                background-color: transparent;
+                writing-mode: horizontal-tb;
                 font-size: 1.5rem;
                 font-weight: 700;
             }
             h2 {
-                font-size: 1rem;
+                width: 100%;
+                font-size: 1.2rem;
                 font-weight: 700;
-                margin-bottom: 20px;
+                margin: -15px 0 20px 0; 
             }
 
             p {
@@ -209,7 +228,7 @@ body {
         #_period6, #_period7, #_period8, #_period9{
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;       
             padding: 50px 140px; 
         }
@@ -297,6 +316,10 @@ body {
                 top: -10%;
             }         
         }
+        .contents {
+            top: 1600px;
+            width: 100%;
+        }
     }   
 }
 
@@ -305,8 +328,33 @@ body {
         .header {
             font-size: 4rem;
         }
+        .parallax-background {
+            top: 100px;
+        }
+        .parallax-background-dojo {
+            top: 200px;
+        }
         .timeline {
-            top: 600px;
+            top: 780px; 
+
+            .parallax-foreground {
+                top: -250px;
+            }
+
+            .textBx {
+                top: -20px;
+            }         
+        }
+    }   
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        .header {
+            font-size: 3rem;
+        }
+        .timeline {
+            top: 700px;
 
             .parallax-foreground {
                 top: -30%;
