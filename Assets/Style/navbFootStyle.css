@@ -1,0 +1,71 @@
+.navbar{
+
+    nav{
+        background-color: transparent;
+        color: white;
+
+        ul{
+            width: 95%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+
+        li{
+            height: 50x;
+
+            &:first-child{
+                margin-right: auto;
+            }
+        }
+
+        a{
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: white;
+
+            &:hover{
+                color: red;
+            }
+        }
+
+        #_hamburger{
+            display: none;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .sidebar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            margin-top: 0;
+            background-color: #121212;
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 20px rgba(18, 18, 18, 0.3);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: all 5s ease-in-out;
+
+            li{
+                width: 100%;
+            }
+
+            a{
+                width: 100%;
+            }
+
+
+        }
+    }
+
+}

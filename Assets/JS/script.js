@@ -1,5 +1,7 @@
 //Script for the preloader animation
 const text = document.querySelector('.first-text')
+const mainText = document.querySelector('.mainText')
+const gradientBg = document.querySelector('.gradientBg')
 
 const textLoad = () =>{
     setTimeout(() => {
@@ -20,7 +22,7 @@ const textLoad = () =>{
 }
 
 textLoad();
-setInterval(textLoad, 7500);
+setInterval(textLoad, 7000);
 
 
 //Script for the preloader events
@@ -31,7 +33,33 @@ window.addEventListener('load', () => {
         loader.classList.add('loader-hidden');
         loader.addEventListener('transitionend', () => {
             document.body.removeChild(loader);
+            
         });
-    }, 7500);
+        
+    }, 7000);
+    
+    
 });
 
+
+
+//script for navbar
+const hamburger = document.getElementById('_hamburger');
+const close = document.getElementById('_close');
+const sideBar = document.querySelector('.sidebar');
+
+function showSideBar(){    
+    sideBar.style.display = 'flex';
+}
+
+function hideSideBar(){
+    sideBar.style.display = 'none';
+}
+
+hamburger.addEventListener('click', () => {
+    showSideBar();
+});
+
+close.addEventListener('click', () => {
+    hideSideBar();
+});
