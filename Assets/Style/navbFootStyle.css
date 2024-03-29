@@ -1,8 +1,9 @@
 .navbar{
-
+    position: fixed;
     nav{
         background-color: transparent;
         color: white;
+        position: sticky;
 
         ul{
             width: 95%;
@@ -38,6 +39,17 @@
             display: none;
             cursor: pointer;
             margin-right: 20px;
+        }
+
+        .topbar{
+            display: flex;
+            width: calc(100vw - 100px);
+            justify-content: space-between;
+
+            .rightBar{
+                display: flex;
+                flex-direction: row;
+            }
         }
 
         .sidebar{
