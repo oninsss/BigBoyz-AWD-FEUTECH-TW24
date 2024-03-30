@@ -27,7 +27,7 @@ body {
     }
     .header {
         top: 120px;
-        left: 50%;
+        left: 52%;
         position: absolute;
         width: 30%;
         height: auto;
@@ -253,50 +253,15 @@ body {
             align-items: center;       
             padding: 50px 100px; 
         }
-
-        #_period1 {
+        #_period1, #_period3, #_period5, #_period7, #_period9 {
             background-color: #0A1018;    
             color: #F7EBDB; 
         }
-        #_period2 {
+        #_period2, #_period4, #_period6, #_period8 {
             background-color: #292E32;
             flex-direction: row-reverse;      
             color: #F7EBDB;   
             text-align: right;
-        }
-        #_period3 {
-            background-color: #0A1018;    
-            color: #F7EBDB;   
-        }
-        #_period4 {
-            background-color: #292E32;
-            flex-direction: row-reverse;      
-            color: #F7EBDB;  
-            text-align: right; 
-        }
-        #_period5 {
-            background-color: #0A1018;    
-            color: #F7EBDB;   
-        }
-        #_period6 {
-            background-color: #292E32;
-            flex-direction: row-reverse;      
-            color: #F7EBDB;   
-            text-align: right;
-        }
-        #_period7 {
-            background-color: #0A1018;    
-            color: #F7EBDB;   
-        }
-        #_period8 {
-            background-color: #292E32;
-            flex-direction: row-reverse;      
-            color: #F7EBDB;   
-            text-align: right;
-        }
-        #_period9 {
-            background-color: #0A1018;    
-            color: #F7EBDB;   
         }
 
         .footer {
@@ -432,16 +397,17 @@ body {
         }
         .parallax-background, 
         .parallax-background-dojo {
-            top: 40px;
-            object-fit: contain;
-
-            img {
-                width: 220%;
-            }
+            top: 0px;
+        }
+        .parallax-background {
+            --parallax-speed: -24;    
+        }
+        .parallax-background-dojo {
+            --parallax-speed: -20;    
         }
 
         .timeline {
-            top: 740px; 
+            top: 640px; 
             height: 720px;
 
             .parallax-foreground {
@@ -462,7 +428,7 @@ body {
         }
 
         .contents {
-            top: 1400px;
+            top: 1320px;
 
             h1 {
                 font-size: 2rem;
@@ -492,23 +458,35 @@ body {
     .parallax {
         .header {
             font-size: 3rem;
+            --parallax-speed: -18;    
         }
         .parallax-background, .parallax-background-dojo {
             top: 20px;
-            width: 120%;
-
+        }
+        .parallax-background {
+            --parallax-speed: -26;        
         }
 
         .timeline {
-            top: 80%;
+            top: 540px;
 
             .parallax-foreground {
                 top: -60%;
             }
-
             .textBx {
                 top: -50%;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
             }         
+        }
+        
+        .contents {
+            top: 1120px;
         }
     }   
 }
@@ -516,20 +494,20 @@ body {
 @media (max-width: 425px) {
     .parallax {
         .header {
-            left: 240px;
+            top: 50px;
+            left: 220px;
             font-size: 2rem;
         }
         .parallax-background, .parallax-background-dojo {
-            top: 60px;
-            width: 160%;
+            top: 10px;
         }
 
         .parallax-background-dojo {
-            left: -120px;
+            left: -40px;
         }
 
         .timeline {
-            top: 70%;
+            top: 340px;
 
             .parallax-foreground {
                 top: -50%;
@@ -548,7 +526,7 @@ body {
         }
 
         .contents {
-            top: 1200px;
+            top: 900px;
 
             h1 {
                 font-size: 2rem;

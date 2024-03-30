@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link rel="stylesheet" href="Assets/Styles/style.css">
+    <link rel="stylesheet" href="../Assets/Style/nav-footer.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    height: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: blue;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.places-body {
+    display: flex;
+    background-color: green;
+    overflow-x: hidden;
+
+    .cards {
+        display: flex;
+        gap: 20px;
+        overflow-x: hidden;
+
+        .card {
+            width: 1000px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.about {
+    height: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: yellow;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul class="sidebar">
+                <li >
+                    <a href="#">
+                        <svg id="_close" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
+                            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9.15625,6.3125l-2.84375,2.84375l15.84375,15.84375l-15.9375,15.96875l2.8125,2.8125l15.96875,-15.9375l15.9375,15.9375l2.84375,-2.84375l-15.9375,-15.9375l15.84375,-15.84375l-2.84375,-2.84375l-15.84375,15.84375z"></path></g></g>
+                        </svg>
+                    </a>
+                    
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">Foods</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Culture</a></li>
+            </ul>
+            <ul class="topbar">
+                <li><a href="#">Home</a></li>
+                <div class="rightBar">
+                    <li><a href="#">Places</a></li>
+                    <li><a href="#">Foods</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Culture</a></li>
+                </div>
+                
+                <li id="_hamburger">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
+                    <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header">
+
+    </div>
+
+    <div class="places-body">
+        <div class="cards">
+            <div class="card">
+                Place 1
+            </div>
+            <div class="card">
+                Place 2
+            </div>
+            <div class="card">
+                Place 3
+            </div>
+            <div class="card">
+                Place 4
+            </div>
+            <div class="card">
+                Place 5
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+
+    </div>
+
+    <script src="../Assets/JS/script.js"></script>
+</body>
+</html>
