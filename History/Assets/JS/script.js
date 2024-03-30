@@ -1,3 +1,39 @@
+const modal = document.getElementById('_timeline');
+const openModal = document.getElementById('_openTimeline');
+const closeModal = document.getElementById('_closeTimeline');
+
+openModal.addEventListener('click', () => {
+    modal.showModal();
+});
+
+closeModal.addEventListener('click', () => {
+    modal.close();
+});
+
+
+//Turn off Parallax upon scrolling down
+const backgroundElements = document.querySelectorAll('.parallax-background, .parallax-background-dojo');
+
+function hasScrolledDown() {
+    return window.scrollY > 2000; 
+}
+
+function removeBackground() {
+    if (hasScrolledDown()) {
+        backgroundElements.forEach(element => {
+            element.style.display = 'none';
+        });
+    } else {
+        backgroundElements.forEach(element => {
+            element.style.display = 'block';
+        });
+    }
+}
+
+window.addEventListener('scroll', removeBackground);
+
+
+// Auto Scroll to Timeline Periods
 scroll1 = () => {
     document.getElementById('_period1').scrollIntoView({behavior: "smooth"});
 }
