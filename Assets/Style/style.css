@@ -10,6 +10,7 @@ body{
     padding: 0;
     background-color: #f4f4f4;
     background: linear-gradient(45deg, #121212, #010101, 135deg, #121212, #010101, 45deg, #121212, #010101);
+    
 }
 
 .loader{
@@ -911,6 +912,7 @@ body{
         }
 
         .secondPart{
+            padding: 20px;
             .design{
                 img{
                     width: 620px;
@@ -926,7 +928,7 @@ body{
 
             .spRight{
                 h1{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 h3{
@@ -946,16 +948,17 @@ body{
         }
 
         .thirdPart{
+            padding: 20px;
             .design{
                 img{
-                    width: 350px;
+                    width: 250px;
                     transform: rotate(0deg);
                 }
             }
 
             .tpLeft{
                 h1{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 h3{
@@ -982,9 +985,10 @@ body{
         }
 
         .fourthPart{
+            padding: 20px;
             .design{
                 img{
-                    width: 620px;
+                    width: 320px;
                 }
             }
 
@@ -997,7 +1001,7 @@ body{
 
             .fpRight{
                 h1{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 h3{
@@ -1017,6 +1021,7 @@ body{
         }
 
         .fifthPart{
+            padding: 20px;
             .design{
                 img{
                     max-width: 420px;
@@ -1026,7 +1031,7 @@ body{
 
             .ffpLeft{
                 h1{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 h3{

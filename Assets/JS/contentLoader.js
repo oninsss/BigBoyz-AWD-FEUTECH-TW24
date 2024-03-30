@@ -58,6 +58,11 @@ const slideUpObserver = new IntersectionObserver(entries => {
     });
 });
 
+const slideUpElements = document.querySelectorAll('.slide-up-initial');
+slideUpElements.forEach(element => {
+    slideUpObserver.observe(element);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const slideUpElements = document.querySelectorAll('.slide-up-initial');
     slideUpElements.forEach(element => {
