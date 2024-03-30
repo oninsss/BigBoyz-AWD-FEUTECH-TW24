@@ -1,3 +1,22 @@
+const navBar = document.getElementById('_navBar');
+const topBar = document.getElementById('_topBar');
+const navLinks = document.querySelectorAll('a');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 760){
+        navBar.style.backdropFilter = 'blur(10px)';
+        topBar.querySelectorAll('a').forEach(link => {
+            link.style.color = '#FFF';
+        });
+    } else {
+        navBar.style.backdropFilter = 'blur(0px)';
+        topBar.querySelectorAll('a').forEach(link => {
+            link.style.color = '#1B190B';
+        });
+    }
+});
+
+
 const modal = document.getElementById('_timeline');
 const openModal = document.getElementById('_openTimeline');
 const closeModal = document.getElementById('_closeTimeline');
