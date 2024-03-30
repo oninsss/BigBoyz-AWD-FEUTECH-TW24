@@ -61,3 +61,46 @@ scroll8 = () => {
 scroll9 = () => {
     document.getElementById('_period9').scrollIntoView({behavior: "smooth"});
 }
+
+//Script for the preloader animation
+const text = document.querySelector('.first-text')
+const mainText = document.querySelector('.mainText')
+const gradientBg = document.querySelector('.gradientBg')
+
+const textLoad = () =>{
+    setTimeout(() => 
+        text.textContent = 'Traveling to History...'
+    , 0);
+    setTimeout(() => {
+        text.textContent = '2024';
+    }, 2500);
+    setTimeout(() => {
+        text.textContent = '1989';
+    }, 5000);
+    setTimeout(() => {
+        text.textContent = '1912';
+    }, 7500);
+    setTimeout(() => {
+        text.textContent = '14 000 BC';
+    }, 10000);
+}
+
+textLoad();
+setInterval(textLoad, 12500);
+
+
+//Script for the preloader events
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader');
+
+    setTimeout(() => {
+        loader.classList.add('loader-hidden');
+        loader.addEventListener('transitionend', () => {
+            document.body.removeChild(loader);
+            
+        });
+        
+    }, 7000);
+    
+    
+});

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/poppins');
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,56 @@ body {
     min-width: 100%;
 
 }
+
+.loader{
+    
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    transition: opacity 1.75s, visibility 1.75s;
+
+    .text{
+        position: relative;
+        color: white;
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .text.first-text::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #121212;
+        border-left: 2px solid red;
+        animation: typing 2.5s steps(8) infinite;
+    }
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes typing {
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
 .parallax {
     position: inherit;
     min-height: 75vh;

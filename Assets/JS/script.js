@@ -8,16 +8,16 @@ const textLoad = () =>{
         text.textContent = 'Japan';
     }, 0);
     setTimeout(() => {
-        text.textContent = 'Tokyo';
+        text.textContent = 'Places';
     }, 1500);
     setTimeout(() => {
-        text.textContent = 'Ramen';
+        text.textContent = 'Foods';
     }, 3000);
     setTimeout(() => {
-        text.textContent = 'Katana';
+        text.textContent = 'Culture';
     }, 4500);
     setTimeout(() => {
-        text.textContent = 'Torii';
+        text.textContent = 'History';
     }, 6000);
 }
 
