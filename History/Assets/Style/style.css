@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/sakurata');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #FEFEFC;
+    height: 100vh;
+    min-width: 100%;
+
+}
+
+.loader{
+    
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    transition: opacity 1.75s, visibility 1.75s;
+
+    .text{
+        position: relative;
+        color: white;
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: 'sakurata', sans-serif;
+    }
+
+    .text.first-text::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #121212;
+        border-left: 2px solid red;
+        animation: typing 2.5s steps(8) infinite;
+    }
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes typing {
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+.parallax {
+    position: inherit;
+    min-height: 75vh;
+    display: grid;
+    grid-template-areas: "stack";
+    display: flex;
+    justify-content: center;
+
+    & > * {
+        grid-area: stack;
+        animation: parallaxY linear;
+        animation-timeline: scroll();
+    }
+    .header {
+        top: 120px;
+        left: 52%;
+        position: absolute;
+        width: 30%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 7rem;
+        font-weight: 700;
+        color: #BC3C2D;
+        z-index: 0;
+        --parallax-speed: -24;
+
+        h1 {   
+            font-family: "Macondo", cursive;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    .parallax-background {
+        top: -140px;
+        position: absolute;
+        width: 100%;
+
+        z-index: -1;
+        --parallax-speed: -32;    
+    }
+    .parallax-background-dojo {
+        top: -160px;
+        left: -80px;
+        position: absolute;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+        --parallax-speed: -24;    
+    }
+    .timeline {
+        top: 960px;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 940px;
+        z-index: 5;
+        color: #F7EBDB;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .parallax-foreground {
+            top: -80%;
+            position: relative;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+        .textBx {      
+            top: -90%;
+            position: relative;
+            width: 50%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            p {
+                font-size: 1.2rem;
+                text-align: center;
+            }          
+            button {
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #BC3C2D;
+                color: #F7EBDB;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #F7EBDB;
+                    color: #BC3C2D;
+                }
+            }
+
+            /* .cards {
+                border-top: 1px solid #F7EBDB;
+                width: 70%;
+                display: flex;
+                padding: 20px 10px 240px 10px;
+                overflow-x: auto;
+                text-align: center;
+                color: #F7EBDB; 
+
+                .card {
+                    background-attachment: fixed;
+                    background-size: cover;
+                    background-position: center;
+                    width: 160px;
+                    height: 220px;
+                    background-color: #292E32;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    margin: 0 6px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+                        filter: none;
+
+                    }
+
+                    &:active {
+                        transform: scale(1);
+                    }
+
+                    p {
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        color: #F7EBDB;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                #_card1 {
+                    background-image: url(https://doyouknowjapan.com/image/history/kyusekki.jpg);
+                }
+                #_card2 {
+                    background-image: url(https://doyouknowjapan.com/image/history/yayoi.jpg);
+                }
+                #_card3 {
+                    background-image: url(https://doyouknowjapan.com/image/history/aska.jpg);
+                }
+                #_card4 {
+                    background-image: url(https://doyouknowjapan.com/image/history/kamakura.jpg);
+                }
+                #_card5 {
+                    background-image: url(https://doyouknowjapan.com/image/history/nanbokucho.jpg);
+                }
+                #_card6 {
+                    background-image: url(https://doyouknowjapan.com/image/history/azuchi-momoyama.jpg);
+                }
+                #_card7 {
+                    background-image: url(https://doyouknowjapan.com/image/history/meiji.jpg);
+                }
+                #_card8 {
+                    background-image: url(https://doyouknowjapan.com/image/history/taisho.jpg);
+                }
+                #_card9 {
+                    background-image: url(https://doyouknowjapan.com/image/history/showa.jpg);
+                }
+            } */
+        }
+    }
+    .contents {
+        top: 1820px;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 6;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        img {
+            width: 40%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .textBx {
+            padding: 20px;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                width: 100%;
+                background-color: transparent;
+                writing-mode: horizontal-tb;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            h2 {
+                width: 100%;
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin: -15px 0 20px 0; 
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        #_period1, #_period2, #_period3, #_period4, #_period5, 
+        #_period6, #_period7, #_period8, #_period9{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;       
+            padding: 50px 100px; 
+        }
+        #_period1, #_period3, #_period5, #_period7, #_period9 {
+            background-color: #0A1018;    
+            color: #F7EBDB; 
+        }
+        #_period2, #_period4, #_period6, #_period8 {
+            background-color: #292E32;
+            flex-direction: row-reverse;      
+            color: #F7EBDB;   
+            text-align: right;
+        }
+
+        .footer {
+            width: 100%;
+            height: 300px;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #909090;
+            font-size: 1rem;
+            z-index: 7;
+
+            footer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 60px;
+                margin: 0 90px;
+                opacity: 0.5;
+            }
+
+            a {
+                color: #909090;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                margin: 0 40px;
+
+                &:hover {
+                    color: #BC3C2D;
+                }
+            }
+        }
+
+    }
+
+}
+
+.modal {
+    background-color: #F9EDDF;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    width: 70%;
+    height: 70%;
+    z-index: 100;
+
+    &::backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+    }
+    .map {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .layout {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+}
+
+@keyframes parallaxX {
+    to {
+        transform: 
+            translateX(calc(var(--parallax-speed) * -200px));
+    }
+}
+@keyframes parallaxY {
+    to {
+        transform: 
+            translateY(calc(var(--parallax-speed) * -200px));
+    }
+}
+
+
+/* RESPONSIVENESS */
+
+/* 1440px (GOODS) */
+@media (max-width: 1440px) {
+    .parallax {
+        .header {
+            font-size: 5rem;
+        }
+        .parallax-background, 
+        .parallax-background-dojo {
+            top: -45px;
+        }
+
+        .timeline {
+            top: 820px;
+
+            .parallax-foreground {
+                top: -70%;
+            }
+            .textBx {
+                top: -70%;
+            }         
+        }
+        .contents {
+            top: 1600px;
+            width: 100%;
+        }
+    }   
+}
+
+/* PARALLAX IMAGE NEEDS TO BE ZOOMED IN */
+
+/* 1024px (GOODS) */
+@media (max-width: 1024px) {
+    .parallax {
+        .header {
+            font-size: 4rem;
+        }
+        .parallax-background, 
+        .parallax-background-dojo {
+            top: 0px;
+        }
+        .parallax-background {
+            --parallax-speed: -24;    
+        }
+        .parallax-background-dojo {
+            --parallax-speed: -20;    
+        }
+
+        .timeline {
+            top: 640px; 
+            height: 720px;
+
+            .parallax-foreground {
+                top: -65%;
+            }
+
+            .textBx {
+                top: -60%;
+                width: 70%;
+
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }         
+        }
+
+        .contents {
+            top: 1320px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .textBx {
+                h1 {
+                    font-size: 1.2rem;
+                }
+                h2 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+
+            #_period1, #_period2, #_period3, #_period4, #_period5,
+            #_period6, #_period7, #_period8, #_period9 {
+                padding: 50px 50px;
+            }
+        }
+    }   
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        .header {
+            font-size: 3rem;
+            --parallax-speed: -18;    
+        }
+        .parallax-background, .parallax-background-dojo {
+            top: 20px;
+        }
+        .parallax-background {
+            --parallax-speed: -26;        
+        }
+
+        .timeline {
+            top: 540px;
+
+            .parallax-foreground {
+                top: -60%;
+            }
+            .textBx {
+                top: -50%;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }         
+        }
+        
+        .contents {
+            top: 1120px;
+        }
+    }   
+}
+
+@media (max-width: 425px) {
+    .parallax {
+        .header {
+            top: 50px;
+            left: 220px;
+            font-size: 2rem;
+        }
+        .parallax-background, .parallax-background-dojo {
+            top: 10px;
+        }
+
+        .parallax-background-dojo {
+            left: -40px;
+        }
+
+        .timeline {
+            top: 340px;
+
+            .parallax-foreground {
+                top: -50%;
+            }
+
+            .textBx {
+                top: -40%;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                }
+            }         
+        }
+
+        .contents {
+            top: 900px;
+
+            h1 {
+                font-size: 2rem;
+                writing-mode: horizontal-tb;
+            }
+
+            img {
+                width: 70%;
+            }
+
+            .textBx {
+                width: 90%;
+                text-align: center;
+
+                h1 {
+                    font-size: 1.2rem;
+                }
+                h2 {
+                    font-size: 1rem;
+                    margin-bottom: 12px;
+                }
+            }
+
+            #_period1, #_period2, #_period3, #_period4, #_period5,
+            #_period6, #_period7, #_period8, #_period9 {
+                padding: 50px 10px;
+                flex-direction: column;
+            }
+        }
+    }   
+}
