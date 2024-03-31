@@ -58,7 +58,7 @@ body {
 
 header {
   background-image: linear-gradient(to top, var(--primary-color), transparent),
-    url("/BigBoyz-AWD-FEUTECH-TW24/culturepage/assets/images/japan-bgh.png");
+    url("/culturepage/assets/image1/japan.gif");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -252,21 +252,25 @@ nav {
   cursor: pointer;
 }
 
-.blogs__container {
+.other__container {
   padding: 5rem 0;
 }
 
-.blogs__grid {
+.other__grid {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.blogs__card {
+.other__card {
   position: relative;
 }
 
-.blogs__card::after {
+.other__card img{
+height: 300px;
+}
+
+.other__card::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -276,7 +280,7 @@ nav {
   background-image: linear-gradient(to top, var(--primary-color), transparent);
 }
 
-.blogs__content {
+.other__content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -287,69 +291,11 @@ nav {
   z-index: 1;
 }
 
-.journals__grid {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.journals__content {
-  padding: 2rem;
-  background-color: var(--primary-color-light);
-}
-
-.journals__author {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.journals__author img {
-  max-width: 30px;
-  border-radius: 100%;
-}
-
-.journals__author p {
-  font-size: 0.9rem;
-  opacity: 0.75;
-}
-
-.journals__content h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.journals__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.journals__footer p {
-  font-size: 0.9rem;
-  opacity: 0.5;
-}
-
-.journals__footer span a {
-  font-size: 1.5rem;
-  color: var(--white);
-  opacity: 0.75;
-}
-
-.journals__btn {
-  margin-top: 4rem;
-  text-align: center;
-}
-
 .hero__container p {
   text-align: center;
   font-size: 12rem;
   font-weight: 700;
-  background-image: url("/BigBoyz-AWD-FEUTECH-TW24/culturepage/assets/images/banner.png");
+  background-image: url("/culturepage/assets/images/banner.png");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px var(--extra-light);
@@ -369,6 +315,7 @@ nav {
 .gallery__card {
   position: relative;
   overflow: hidden;
+  height: 400px; /* Set a fixed height for uniformity */
 }
 
 .gallery__content {
@@ -393,7 +340,6 @@ nav {
 .gallery__card:hover .gallery__content {
   bottom: 0;
 }
-
 .contact {
   background-image: linear-gradient(
     to top,
