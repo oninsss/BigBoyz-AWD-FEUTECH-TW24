@@ -3,7 +3,7 @@ const topBar = document.getElementById('_topBar');
 const navLinks = document.querySelectorAll('a');
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 760){
+    if(window.scrollY > 500){
         navBar.style.backdropFilter = 'blur(10px)';
         topBar.querySelectorAll('a').forEach(link => {
             link.style.color = '#FFF';
