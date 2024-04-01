@@ -5,19 +5,19 @@ const gradientBg = document.querySelector('.gradientBg')
 
 const textLoad = () =>{
     setTimeout(() => {
-        text.textContent = 'Japan';
+        text.textContent = 'Sushi';
     }, 0);
     setTimeout(() => {
-        text.textContent = 'Places';
+        text.textContent = 'Ramen';
     }, 1500);
     setTimeout(() => {
-        text.textContent = 'Foods';
+        text.textContent = 'Udon';
     }, 3000);
     setTimeout(() => {
-        text.textContent = 'Culture';
+        text.textContent = 'Tempura';
     }, 4500);
     setTimeout(() => {
-        text.textContent = 'History';
+        text.textContent = 'Takoyaki';
     }, 6000);
 }
 

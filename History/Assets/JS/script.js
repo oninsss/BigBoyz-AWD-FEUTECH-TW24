@@ -123,3 +123,24 @@ window.addEventListener('load', () => {
     
     
 });
+
+//script for navbar
+const hamburger = document.getElementById('_hamburger');
+const close = document.getElementById('_close');
+const sideBar = document.querySelector('.sidebar');
+
+function showSideBar(){    
+    sideBar.style.display = 'flex';
+}
+
+function hideSideBar(){
+    sideBar.style.display = 'none';
+}
+
+hamburger.addEventListener('click', () => {
+    showSideBar();
+});
+
+close.addEventListener('click', () => {
+    hideSideBar();
+});
