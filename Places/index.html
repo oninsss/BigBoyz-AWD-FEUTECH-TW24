@@ -12,12 +12,12 @@
 </head>
 <body>
 
-    <!-- <div class="loader">
+    <div class="loader">
         <span class="text first-text">
             Explore
         </span>
-    </div> -->
-    
+    </div>
+<!--     
     <div class="navbar" id="_navBar">
         <nav>
             <ul class="sidebar">
@@ -55,7 +55,7 @@
                 
             </ul>
         </nav>
-    </div>
+    </div> -->
 
     <div class="header">
         <div class="textBx">
@@ -68,11 +68,12 @@
 
     <div class="places-body">
         <div class="textBx hidden">
+            <h2>人気の目的地</h2>
             <h1>Top 5 Destinations</h1>
             <p>Discover Japan's Top Tourist Destinations & Must-Visit Places</p>
             <a href="https://www.cebupacificair.com/en-PH/pages/explore/international/flights-to-Tokyo?nohf=true&header=City%20Guide"><button>Book Now</button></a>
         </div>
-        <div class="cards right-slide-initial">
+        <div class="cards hidden">
             <div class="card" id="_card1" onclick="pageContents1()">
                 <div class="textBx">
                     <h2>Tokyo Disneyland and DisneySea</h2>
@@ -102,7 +103,7 @@
     </div>
 
     <div class="features">
-        <div class="feature left-slide-initial" id="_feature1">
+        <div class="feature hidden" id="_feature1">
             <span class="material-symbols-outlined">
                 travel
             </span>
@@ -114,7 +115,7 @@
             </span>
             <h6>Ratings</h6>
         </div>
-        <div class="feature right-slide-initial" id="_feature3">
+        <div class="feature hidden" id="_feature3">
             <span class="material-symbols-outlined">
                 routine
             </span>
@@ -124,10 +125,11 @@
 
     <div class="about">
         <div class="imgBx hidden">
-            <img src="Assets/Images/.png">
+            <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         </div>
-        <div class="infoBx  right-slide-initial">
+        <div class="infoBx hidden">
             <div class="textBxAbout">
+                <h2>日出ずる国</h2>
                 <h1>Land of the Rising Sun</h1>
                 <p>
                     Japan is an island nation in East Asia, located in the Pacific Ocean. 
@@ -160,7 +162,7 @@
 
 <dialog id="_mapModal">
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17168227.346571904!2d132.79759281862178!3d34.22057174483484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e1!3m2!1sen!2sph!4v1711911967667!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17168227.346571904!2d132.79759281862178!3d34.22057174483484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e1!3m2!1sen!2sph!4v1711911967667!5m2!1sen!2sph" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>    
     <button id="_closeMap">Close</button>
 </dialog>

@@ -1,6 +1,7 @@
 // Tokyo Disneyland and DisneySea
 function pageContents1() {
     document.querySelector('.textBxAbout').innerHTML = `
+        <h2>東京ディズニーランドとディズニーシー</h2>
         <h1>Tokyo Disneyland and DisneySea</h1>
         <p>
             Disneyland and DisneySea are two of the most popular theme parks in Japan. 
@@ -16,12 +17,13 @@ function pageContents1() {
 
     // Change the map
     document.querySelector('.map').innerHTML = `
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2096564.0431102752!2d138.0027060751251!3d34.99424749976479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187d03114737b3%3A0xe4d93636d509d3cb!2sTokyo%20Disneyland!5e1!3m2!1sen!2sph!4v1711917004215!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2096564.0431102752!2d138.0027060751251!3d34.99424749976479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187d03114737b3%3A0xe4d93636d509d3cb!2sTokyo%20Disneyland!5e1!3m2!1sen!2sph!4v1711917004215!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     `;
 
     // Change the header
     document.querySelector('.header').style.backgroundImage = "linear-gradient(0deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0),  rgba(13, 13, 13, 0.9))";
     document.getElementById('_headerVid').src = "Assets/Images/header1.mp4";
+    document.querySelector('.header').scrollIntoView({behavior: "smooth"});
 
     // Change the features
     document.getElementById('_feature1').innerHTML = `
@@ -29,30 +31,33 @@ function pageContents1() {
             travel
         </span>
         <h6>Visits</h6>
-        <p>1.5M</p>
+        <p>4M</p>
     `;
     document.getElementById('_feature2').innerHTML = `
         <span class="material-symbols-outlined">
             recommend
         </span>
         <h6>Ratings</h6>
-        <p>4.5</p>
+        <p>4.9</p>
     `;
     document.getElementById('_feature3').innerHTML = `
         <span class="material-symbols-outlined">
             routine
         </span>
         <h6>Open</h6>
-        <p>9:00AM - 8:00PM</p>
+        <p>12hrs</p>
     `;
 
     // Change the image
-    document.querySelector('.imgBx').style.backgroundImage = "url('Assets/Images/disneyland.jpg')";
+    document.querySelector('.imgBx').innerHTML = `
+        <img src="https://images.unsplash.com/photo-1624601573012-efb68931cc8f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Disneyland">
+    `;
 }
 
 // Kyoto's temples and shrines
 function pageContents2() {
     document.querySelector('.textBxAbout').innerHTML = `
+        <h2>京都の寺院と神社</h2>
         <h1>Kyoto's temples and shrines</h1>
         <p>
             Kyoto is home to some of Japan's most beautiful temples and shrines. From 
@@ -67,12 +72,13 @@ function pageContents2() {
 
     // Change the map
     document.querySelector('.map').innerHTML = `
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261326.97377006867!2d135.45044877748472!3d35.031085742072236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001077ff3ae5187%3A0xea1bdd27377bb743!2sNinna-ji%20Temple!5e1!3m2!1sen!2sph!4v1711917458093!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261326.97377006867!2d135.45044877748472!3d35.031085742072236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001077ff3ae5187%3A0xea1bdd27377bb743!2sNinna-ji%20Temple!5e1!3m2!1sen!2sph!4v1711917458093!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     `;
 
     // Change the header
     document.querySelector('.header').style.backgroundImage = "linear-gradient(0deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0),  rgba(13, 13, 13, 0.9))";
     document.getElementById('_headerVid').src = "Assets/Images/header2.mp4";
+    document.querySelector('.header').scrollIntoView({behavior: "smooth"});
 
     // Change the features
     document.getElementById('_feature1').innerHTML = `
@@ -80,28 +86,33 @@ function pageContents2() {
             travel
         </span>
         <h6>Visits</h6>
-        <p>1.5M</p>
+        <p>2.5M</p>
     `;
     document.getElementById('_feature2').innerHTML = `
         <span class="material-symbols-outlined">
             recommend
         </span>
         <h6>Ratings</h6>
-        <p>4.5</p>
+        <p>4.8</p>
     `;
     document.getElementById('_feature3').innerHTML = `
         <span class="material-symbols-outlined">
             routine
         </span>
         <h6>Open</h6>
-        <p>9:00AM - 8:00PM</p>
+        <p>18hrs</p>
     `;
 
+    // Change the image
+    document.querySelector('.imgBx').innerHTML = `
+        <img src="https://images.unsplash.com/flagged/photo-1575356253609-f32f494b1a23?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kyoto Temple">
+    `;
 }
 
 // Yakushima
 function pageContents3() {
     document.querySelector('.textBxAbout').innerHTML = `
+        <h2>屋久島</h2>
         <h1>Yakushima</h1>
         <p>
             Yakushima is a small island off the coast of Kyushu that is known for its 
@@ -118,12 +129,13 @@ function pageContents3() {
 
     // Change the map
     document.querySelector('.map').innerHTML = `
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d551769.6842947407!2d130.2650989623416!3d30.30672326666116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353d224fb70b11a5%3A0x209870f7a4325303!2sYakushima%20Island!5e1!3m2!1sen!2sph!4v1711917522409!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d551769.6842947407!2d130.2650989623416!3d30.30672326666116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353d224fb70b11a5%3A0x209870f7a4325303!2sYakushima%20Island!5e1!3m2!1sen!2sph!4v1711917522409!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     `;
 
     // Change the header
     document.querySelector('.header').style.backgroundImage = "linear-gradient(0deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0),  rgba(13, 13, 13, 0.9))";
     document.getElementById('_headerVid').src = "Assets/Images/header3.mp4";
+    document.querySelector('.header').scrollIntoView({behavior: "smooth"});
 
     // Change the features
     document.getElementById('_feature1').innerHTML = `
@@ -131,27 +143,33 @@ function pageContents3() {
             travel
         </span>
         <h6>Visits</h6>
-        <p>1.5M</p>
+        <p>1.2M</p>
     `;
     document.getElementById('_feature2').innerHTML = `
         <span class="material-symbols-outlined">
             recommend
         </span>
         <h6>Ratings</h6>
-        <p>4.5</p>
+        <p>4.8</p>
     `;
     document.getElementById('_feature3').innerHTML = `
         <span class="material-symbols-outlined">
             routine
         </span>
         <h6>Open</h6>
-        <p>9:00AM - 8:00PM</p>
+        <p>17hrs</p>
+    `;
+
+    // Change the image
+    document.querySelector('.imgBx').innerHTML = `
+        <img src="https://images.unsplash.com/photo-1575028239577-1ba3470b4cb3?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Yakushima">
     `;
 }
 
 // Mount Fuji
 function pageContents4() {
     document.querySelector('.textBxAbout').innerHTML = `
+        <h2>富士山</h2>
         <h1>Mount Fuji</h1>
         <p>
             Mount Fuji is Japan's highest mountain and one of its most iconic symbols. 
@@ -167,12 +185,13 @@ function pageContents4() {
 
     // Change the map
     document.querySelector('.map').innerHTML = `
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32571.873107048727!2d138.7068067616108!3d35.360658258435414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019629a42fdc899%3A0xa6a1fcc916f3a4df!2sMount%20Fuji!5e1!3m2!1sen!2sph!4v1711917621542!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32571.873107048727!2d138.7068067616108!3d35.360658258435414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019629a42fdc899%3A0xa6a1fcc916f3a4df!2sMount%20Fuji!5e1!3m2!1sen!2sph!4v1711917621542!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     `;
 
     // Change the header
     document.querySelector('.header').style.backgroundImage = "linear-gradient(0deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0),  rgba(13, 13, 13, 0.9))";
     document.getElementById('_headerVid').src = "Assets/Images/header4.mp4";
+    document.querySelector('.header').scrollIntoView({behavior: "smooth"});
 
     // Change the features
     document.getElementById('_feature1').innerHTML = `
@@ -180,27 +199,32 @@ function pageContents4() {
             travel
         </span>
         <h6>Visits</h6>
-        <p>1.5M</p>
+        <p>3.5M</p>
     `;
     document.getElementById('_feature2').innerHTML = `
         <span class="material-symbols-outlined">
             recommend
         </span>
         <h6>Ratings</h6>
-        <p>4.5</p>
+        <p>5</p>
     `;
     document.getElementById('_feature3').innerHTML = `
         <span class="material-symbols-outlined">
             routine
         </span>
         <h6>Open</h6>
-        <p>9:00AM - 8:00PM</p>
+        <p>16hrs</p>
+    `;
+    // Change the image
+    document.querySelector('.imgBx').innerHTML = `
+        <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mt. Fuji">
     `;
 }
 
 // Akihabara
 function pageContents5() {
     document.querySelector('.textBxAbout').innerHTML = `
+        <h2>秋葉原</h2>
         <h1>Akihabara</h1>
         <p>
             Akihabara is a district in Tokyo that is famous for its otaku culture and 
@@ -216,12 +240,13 @@ function pageContents5() {
 
     // Change the map
     document.querySelector('.map').innerHTML = `
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8108.606809742113!2d139.7671667257894!3d35.69995040351751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d829dd5cd%3A0x772f5995da208987!2sAkihabara%20Electric%20Town%2C%20Tokyo%2C%20Japan!5e1!3m2!1sen!2sph!4v1711917722227!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8108.606809742113!2d139.7671667257894!3d35.69995040351751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d829dd5cd%3A0x772f5995da208987!2sAkihabara%20Electric%20Town%2C%20Tokyo%2C%20Japan!5e1!3m2!1sen!2sph!4v1711917722227!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     `;
 
     // Change the header
     document.querySelector('.header').style.backgroundImage = "linear-gradient(0deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0),  rgba(13, 13, 13, 0.9))";
     document.getElementById('_headerVid').src = "Assets/Images/header5.mp4";
+    document.querySelector('.header').scrollIntoView({behavior: "smooth"});
 
     // Change the features
     document.getElementById('_feature1').innerHTML = `
@@ -229,21 +254,24 @@ function pageContents5() {
             travel
         </span>
         <h6>Visits</h6>
-        <p>1.5M</p>
+        <p>1M</p>
     `;
     document.getElementById('_feature2').innerHTML = `
         <span class="material-symbols-outlined">
             recommend
         </span>
         <h6>Ratings</h6>
-        <p>4.5</p>
+        <p>5</p>
     `;
     document.getElementById('_feature3').innerHTML = `
         <span class="material-symbols-outlined">
             routine
         </span>
         <h6>Open</h6>
-        <p>9:00AM - 8:00PM</p>
+        <p>24hrs</p>
+    `;
+    document.querySelector('.imgBx').innerHTML = `
+        <img src="https://images.unsplash.com/photo-1613487957484-32c977a8bd62?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Akihabara">
     `;
 }
 
@@ -254,10 +282,12 @@ const closeModal = document.getElementById('_closeMap');
 
 openModal.addEventListener('click', () => {
     modal.showModal();
+    document.body.style.overflowY = 'hidden';
 });
 
 closeModal.addEventListener('click', () => {
     modal.close();
+    document.body.style.overflowY = 'scroll';
 });
 
 //Script for the preloader animation
@@ -267,19 +297,19 @@ const gradientBg = document.querySelector('.gradientBg')
 
 const textLoad = () =>{
     setTimeout(() => 
-        text.textContent = 'Explore the shing shong shaolang of Japan'
+        text.textContent = "Exploring Japan's Rich Heritage"
     , 0);
     setTimeout(() => {
-        text.textContent = '2024';
+        text.textContent = 'Serene Temples';
     }, 2500);
     setTimeout(() => {
-        text.textContent = '1989';
+        text.textContent = 'Vibrant Cities';
     }, 5000);
     setTimeout(() => {
-        text.textContent = '1912';
+        text.textContent = 'Scenic Landscapes';
     }, 7500);
     setTimeout(() => {
-        text.textContent = '14 000 BC';
+        text.textContent = 'Discovering the Land of the Rising Sun...';
     }, 10000);
 }
 
