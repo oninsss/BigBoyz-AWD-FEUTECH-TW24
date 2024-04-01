@@ -146,7 +146,7 @@ body {
 .container .secondPart .spLeft {
   z-index: 1;
 }
-.container .secondPart .spLeft img {
+.container .secondPart .spLeft video {
   width: 600px;
   border-radius: 20px;
 }
@@ -265,7 +265,7 @@ body {
 .container .thirdPart .tpRight {
   z-index: 1;
 }
-.container .thirdPart .tpRight img {
+.container .thirdPart .tpRight video {
   width: 600px;
   border-radius: 20px;
 }
@@ -292,7 +292,7 @@ body {
 .container .fourthPart .fpLeft {
   z-index: 1;
 }
-.container .fourthPart .fpLeft img {
+.container .fourthPart .fpLeft video {
   width: 600px;
   border-radius: 20px;
 }
@@ -411,7 +411,7 @@ body {
 .container .fifthPart .ffpRight {
   z-index: 1;
 }
-.container .fifthPart .ffpRight img {
+.container .fifthPart .ffpRight video {
   width: 600px;
   border-radius: 20px;
 }
@@ -460,7 +460,7 @@ body {
   .container .secondPart .design img {
     width: 820px;
   }
-  .container .secondPart .spLeft img {
+  .container .secondPart .spLeft video {
     width: 300px;
   }
   .container .secondPart .spRight {
@@ -501,7 +501,7 @@ body {
   .container .thirdPart .tpLeft .checkHere button {
     font-size: 0.75rem;
   }
-  .container .thirdPart .tpRight img {
+  .container .thirdPart .tpRight video {
     width: 300px;
   }
   .container .fourthPart {
@@ -510,7 +510,7 @@ body {
   .container .fourthPart .design img {
     width: 820px;
   }
-  .container .fourthPart .fpLeft img {
+  .container .fourthPart .fpLeft video {
     width: 300px;
   }
   .container .fourthPart .fpRight {
@@ -551,7 +551,7 @@ body {
   .container .fifthPart .ffpLeft .checkHere button {
     font-size: 0.75rem;
   }
-  .container .fifthPart .ffpRight img {
+  .container .fifthPart .ffpRight video {
     width: 300px;
   }
 }
@@ -581,7 +581,7 @@ body {
   .container .secondPart .design img {
     width: 820px;
   }
-  .container .secondPart .spLeft img {
+  .container .secondPart .spLeft video {
     width: 300px;
   }
   .container .secondPart .spRight {
@@ -624,7 +624,7 @@ body {
   .container .thirdPart .tpLeft .checkHere button {
     font-size: 0.75rem;
   }
-  .container .thirdPart .tpRight img {
+  .container .thirdPart .tpRight video {
     width: 300px;
   }
   .container .fourthPart {
@@ -634,7 +634,7 @@ body {
   .container .fourthPart .design img {
     width: 820px;
   }
-  .container .fourthPart .fpLeft img {
+  .container .fourthPart .fpLeft video {
     width: 300px;
   }
   .container .fourthPart .fpRight {
@@ -677,7 +677,7 @@ body {
   .container .fifthPart .ffpLeft .checkHere button {
     font-size: 0.75rem;
   }
-  .container .fifthPart .ffpRight img {
+  .container .fifthPart .ffpRight video {
     width: 300px;
   }
 }
@@ -705,7 +705,7 @@ body {
   .container .secondPart .design img {
     width: 620px;
   }
-  .container .secondPart .spLeft img {
+  .container .secondPart .spLeft video {
     width: 200px;
   }
   .container .secondPart .spRight h1 {
@@ -739,7 +739,7 @@ body {
   .container .thirdPart .tpLeft .checkHere button {
     font-size: 0.5rem;
   }
-  .container .thirdPart .tpRight img {
+  .container .thirdPart .tpRight video {
     width: 200px;
   }
   .container .fourthPart {
@@ -748,7 +748,7 @@ body {
   .container .fourthPart .design img {
     width: 320px;
   }
-  .container .fourthPart .fpLeft img {
+  .container .fourthPart .fpLeft video {
     width: 200px;
   }
   .container .fourthPart .fpRight h1 {
@@ -782,7 +782,7 @@ body {
   .container .fifthPart .ffpLeft .checkHere button {
     font-size: 0.5rem;
   }
-  .container .fifthPart .ffpRight img {
+  .container .fifthPart .ffpRight video {
     width: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
