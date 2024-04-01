@@ -297,7 +297,7 @@ const gradientBg = document.querySelector('.gradientBg')
 
 const textLoad = () =>{
     setTimeout(() => 
-        text.textContent = "Exploring Japan's Rich Heritage"
+        text.textContent = "Exploring Japan's "
     , 0);
     setTimeout(() => {
         text.textContent = 'Serene Temples';
@@ -309,7 +309,7 @@ const textLoad = () =>{
         text.textContent = 'Scenic Landscapes';
     }, 7500);
     setTimeout(() => {
-        text.textContent = 'Discovering the Land of the Rising Sun...';
+        text.textContent = 'Land of the Rising Sun...';
     }, 10000);
 }
 
@@ -342,5 +342,27 @@ window.addEventListener('scroll', () => {
     } else {
         navBar.style.backdropFilter = 'blur(0px)';
     }
+});
+
+
+//script for navbar
+const hamburger = document.getElementById('_hamburger');
+const close = document.getElementById('_close');
+const sideBar = document.querySelector('.sidebar');
+
+function showSideBar(){    
+    sideBar.style.display = 'flex';
+}
+
+function hideSideBar(){
+    sideBar.style.display = 'none';
+}
+
+hamburger.addEventListener('click', () => {
+    showSideBar();
+});
+
+close.addEventListener('click', () => {
+    hideSideBar();
 });
 

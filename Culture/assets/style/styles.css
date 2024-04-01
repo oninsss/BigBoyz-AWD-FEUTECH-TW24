@@ -609,3 +609,32 @@ height: 300px;
 }
 
 
+@media (max-width: 425px){
+  .loader{
+    width: 100vw;
+    .text{
+        font-size: 2rem;
+    }
+  }
+  .header__container{
+    margin-left: 0rem;
+    h1{
+      font-size: 2rem;
+    }
+    h4{
+      font-size: 0.5rem;
+    }
+  }
+  .section__header{
+    font-size: 2rem;
+  }
+  .other__content{
+    font-size: 0.5rem;
+  }
+  .section__subheader{
+    font-size: 0.75rem;
+  }
+  .gallery__content h4{
+    font-size: 1rem;
+  }
+}

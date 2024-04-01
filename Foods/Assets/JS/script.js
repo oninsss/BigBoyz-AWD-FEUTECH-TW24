@@ -45,6 +45,8 @@ window.addEventListener('load', () => {
 
 
 
+
+
 //script for navbar
 const hamburger = document.getElementById('_hamburger');
 const close = document.getElementById('_close');

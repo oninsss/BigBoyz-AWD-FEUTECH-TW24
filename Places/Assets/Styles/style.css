@@ -4,7 +4,6 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
     transition: all 0.5s ease-in-out;
 }
 
@@ -461,6 +460,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    .loader{
+        width: 100vw;
+        .text{
+            font-size: 2rem;
+        }
+    }
     .places-body {
         width: 100%;
 
@@ -523,8 +528,27 @@ body {
 }
 
 @media (max-width: 425px) {
+    .loader{
+        width: 100vw;
+        .text{
+            font-size: 2rem;
+        }
+    }
+    .navbar {
+        nav {
+            .topbar {
+                margin: 0;
+            }
+        }
+    }
+    .loader{
+        .text{
+            font-size: 1rem;
+        }
+    }
     .header {
         .textBx {
+            width: 62%;
             h1 {
                 font-size: 3rem;
             }
@@ -536,7 +560,7 @@ body {
 
     .places-body {
         .cards {
-            padding: 0px 30px;
+            padding: 0px 15px;
             .card {
                 width: 50%;
             }

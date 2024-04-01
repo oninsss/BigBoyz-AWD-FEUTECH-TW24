@@ -708,6 +708,12 @@ body{
 
 /* For Responsiveness */
 @media (max-width: 768px) {
+    .loader{
+        width: 100vw;
+        .text{
+            font-size: 2rem;
+        }
+    }
     .container{
         .topPart{
             .mainText{
@@ -891,7 +897,7 @@ body{
 
 @media (max-width: 425px) {
     .loader{
-        width: 10vw;
+        width: 100vw;
         .text{
             font-size: 2rem;
         }

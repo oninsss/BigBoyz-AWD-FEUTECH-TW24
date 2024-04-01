@@ -174,12 +174,13 @@
 @media (max-width: 768px){
     .navbar{
         z-index: 99999;
+        /* width: 100vh; */
         nav{
             
 
             #_hamburger{
                 display: block;
-
+                
             }
             
             .sidebar{
@@ -187,6 +188,7 @@
                 justify-content: flex-start;
                 padding: 30px;
                 padding-left: 10px;
+                height: 100vh;
                 gap: 2px;
 
                 li{
