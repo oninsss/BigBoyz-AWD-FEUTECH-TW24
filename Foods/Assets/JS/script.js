@@ -50,12 +50,14 @@ const hamburger = document.getElementById('_hamburger');
 const close = document.getElementById('_close');
 const sideBar = document.querySelector('.sidebar');
 
-function showSideBar(){    
-    sideBar.style.display = 'flex';
+function showSideBar(){
+    sideBar.style.display = 'flex';    
+    sideBar.style.opacity = '1';
 }
 
 function hideSideBar(){
     sideBar.style.display = 'none';
+    sideBar.style.opacity = '0';
 }
 
 hamburger.addEventListener('click', () => {

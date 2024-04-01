@@ -183,7 +183,7 @@
             }
             
             .sidebar{
-                display: flex;
+                display: none;
                 justify-content: flex-start;
                 padding: 30px;
                 padding-left: 10px;
@@ -209,7 +209,7 @@
                 .logo{
                     li{
                         a{
-                            height: 30px;
+                            height: 40px;
                             img{
                                 width: 30px;
                             }
@@ -259,12 +259,6 @@
                     margin: 0;
                 }
                 gap: 10px;
-            }
-            .copyright{
-                p{
-                    
-                }
-                
             }
         }
     }
