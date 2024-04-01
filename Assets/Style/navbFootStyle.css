@@ -1,17 +1,20 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
 .navbar{
     position: fixed;
     z-index: 3;
     transition: all 1s ease-in-out;
+    font-family: 'Poppins', sans-serif;
     
     nav{
         background-color: transparent;
-        color: #1B190B;
+        color: white;
         position: sticky;
         font-weight: 600;
         
 
         ul{
-            width: 10%;
+            width: 100%;
             list-style: none;
             display: flex;
             justify-content: flex-end;
@@ -30,7 +33,7 @@
         a{
             height: 100%;
             padding: 0 30px;
-            color: #1B190B;
+            color: white;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -42,7 +45,7 @@
 
             img{
                 margin-top: 20px;
-                width: 50px;
+                width: 40px;
             }
         }
 
@@ -137,6 +140,19 @@
 
             .topbar{
                 width: calc(100vw - 50px);
+                width: 100vw;
+                padding: 10px;
+
+                .logo{
+                    li{
+                        a{
+                            height: 30px;
+                            img{
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
 
                 .rightBar{
                     display: none;
