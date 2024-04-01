@@ -1,674 +1,586 @@
-@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-@import url('https://fonts.cdnfonts.com/css/sakurata');
-
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/sakurata");
 * {
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
-.loader{   
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212;
-    transition: opacity 1.75s, visibility 1.75s;
-
-    .text{
-        position: relative;
-        color: white;
-        font-size: 3rem;
-        font-weight: 400;
-        font-family: 'sakurata', sans-serif;
-    }
-
-    .text.first-text::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #121212;
-        border-left: 2px solid red;
-        animation: typing 2.5s steps(8) infinite;
-    }
+.loader {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  transition: opacity 1.75s, visibility 1.75s;
+}
+.loader .text {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "sakurata", sans-serif;
+}
+.loader .text.first-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  border-left: 2px solid red;
+  animation: typing 2.5s steps(8) infinite;
 }
 
-.loader-hidden{
-    opacity: 0;
-    visibility: hidden;
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes typing {
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0;
-    }
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-
-
 .parallax {
-    min-height: 75vh;
-    display: grid;
-    grid-template-areas: "stack";
-
-    & > * {
-        grid-area: stack;
-        animation: parallaxY linear;
-        animation-timeline: scroll();
-    }
-    .header {
-        top: 0;
-        left: 52%;
-        position: absolute;
-        width: 30%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 7rem;
-        font-weight: 700;
-        color: #BC3C2D;
-        z-index: 0;
-        --parallax-speed: -24;
-
-        h1 {   
-            font-family: "Macondo", cursive;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-    }
-    .parallax-background {
-        top: -140px;
-        position: absolute;
-        width: 100%;
-        z-index: -1;
-        --parallax-speed: -32;    
-    }
-    .parallax-background-dojo {
-        top: -160px;
-        left: -80px;
-        position: absolute;
-        height: auto;
-        width: 100%;
-        object-fit: contain;
-        z-index: 1;
-        --parallax-speed: -24;    
-    }
-    .timeline {
-        top: 1000px;
-        position: absolute;
-        background-color: #000;
-        width: 100%;
-        height: 1100px;
-        z-index: 5;
-        color: #F7EBDB;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .parallax-foreground {
-            top: -55%;
-            position: relative;
-            width: 100%;
-            height: auto;
-            z-index: 1;
-        }
-        .textBx {      
-            top: -70%;
-            position: relative;
-            width: 50%;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            h1 {
-                background-color: rgb(188,60,45);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 140px;
-                height: 140px;
-                border-radius: 50%;
-                font-size: 3rem;
-                font-weight: 700;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-            p {
-                font-size: 1.2rem;
-                text-align: center;
-            }          
-
-            .btns {
-                min-width: 70%;
-                margin-top: 80px;
-                display: flex;
-                gap: 10px;
-                padding: 20px 10px 240px 10px;
-                overflow-x: auto;
-                text-align: center;
-                color: #F7EBDB; 
-
-                .btn {
-                    width: 120px;
-                    height: 140px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: start;
-                    align-items: center;
-                    border-radius: 5px;
-                    margin: 0 6px;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                        transform: scale(1.1);
-                        -webkit-box-reflect: below -16px linear-gradient(transparent, #0005);
-                        filter: none;
-                    }
-
-                    &:active {
-                        transform: scale(1);
-                    }
-
-                    button {
-                        height: 30px;
-                        width: 30px;
-                        background-color: #F7EBDB;
-                        border: none;
-                        border-radius: 50%;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-
-                        &:hover {
-                            background-color: #F7EBDB;
-                            color: #BC3C2D;
-                        }
-                    }
-
-                    p {
-                        color: #F7EBDB;
-                        font-size: 0.8rem;
-                    }
-                }
-            }
-        }
-    }
-    .contents {
-        top: 2020px;
-        position: absolute;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 6;
-
-        h1 {
-            color: #BC3C2D;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            text-shadow: 2px 5px #000;
-        }
-
-        img {
-            width: 40%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .textBx {
-            padding: 20px;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            h1 {
-                color: #F7EBDB;
-                width: 100%;
-                background-color: transparent;
-                writing-mode: horizontal-tb;
-                font-size: 1.5rem;
-                font-weight: 700;
-                text-shadow: none;
-            }
-            h2 {
-                width: 100%;
-                font-size: 1.2rem;
-                font-weight: 700;
-                margin: -15px 0 20px 0; 
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        #_period1, #_period2, #_period3, #_period4, #_period5, 
-        #_period6, #_period7, #_period8, #_period9{
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;       
-            padding: 50px 100px; 
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
-            color: #F7EBDB;   
-        }
-        #_period1, #_period3, #_period5, #_period7, #_period9 {
-            background-color: #0A1018;    
-        }
-        #_period2, #_period4, #_period6, #_period8 {
-            background-color: #292E32;
-            flex-direction: row-reverse;      
-            text-align: right;
-        }
-
-    }
-
+  min-height: 75vh;
+  display: grid;
+  grid-template-areas: "stack";
+}
+.parallax > * {
+  grid-area: stack;
+  animation: parallaxY linear;
+  animation-timeline: scroll();
+}
+.parallax .header {
+  top: 0;
+  left: 52%;
+  position: absolute;
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 7rem;
+  font-weight: 700;
+  color: #BC3C2D;
+  z-index: 0;
+  --parallax-speed: -24;
+}
+.parallax .header h1 {
+  font-family: "Macondo", cursive;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.parallax .parallax-background {
+  top: -140px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  --parallax-speed: -32;
+}
+.parallax .parallax-background-dojo {
+  top: -160px;
+  left: -80px;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
+  --parallax-speed: -24;
+}
+.parallax .timeline {
+  top: 1000px;
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 1100px;
+  z-index: 5;
+  color: #F7EBDB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax .timeline .parallax-foreground {
+  top: -55%;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.parallax .timeline .textBx {
+  top: -70%;
+  position: relative;
+  width: 50%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.parallax .timeline .textBx h1 {
+  background-color: rgb(188, 60, 45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.parallax .timeline .textBx p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.parallax .timeline .textBx .btns {
+  min-width: 70%;
+  margin-top: 80px;
+  display: flex;
+  gap: 10px;
+  padding: 20px 10px 240px 10px;
+  overflow-x: auto;
+  text-align: center;
+  color: #F7EBDB;
+}
+.parallax .timeline .textBx .btns .btn {
+  width: 120px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.parallax .timeline .textBx .btns .btn:hover {
+  transform: scale(1.1);
+  -webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0, 0, 0, 0.3333333333));
+  filter: none;
+}
+.parallax .timeline .textBx .btns .btn:active {
+  transform: scale(1);
+}
+.parallax .timeline .textBx .btns .btn button {
+  height: 30px;
+  width: 30px;
+  background-color: #F7EBDB;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.parallax .timeline .textBx .btns .btn button:hover {
+  background-color: #F7EBDB;
+  color: #BC3C2D;
+}
+.parallax .timeline .textBx .btns .btn p {
+  color: #F7EBDB;
+  font-size: 0.8rem;
+}
+.parallax .contents {
+  top: 2020px;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+}
+.parallax .contents h1 {
+  color: #BC3C2D;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-shadow: 2px 5px #000;
+}
+.parallax .contents img {
+  width: 40%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.parallax .contents .textBx {
+  padding: 20px;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax .contents .textBx h1 {
+  color: #F7EBDB;
+  width: 100%;
+  background-color: transparent;
+  writing-mode: horizontal-tb;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: none;
+}
+.parallax .contents .textBx h2 {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: -15px 0 20px 0;
+}
+.parallax .contents .textBx p {
+  font-size: 1rem;
+}
+.parallax .contents #_period1, .parallax .contents #_period2, .parallax .contents #_period3, .parallax .contents #_period4, .parallax .contents #_period5,
+.parallax .contents #_period6, .parallax .contents #_period7, .parallax .contents #_period8, .parallax .contents #_period9 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 100px;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+  color: #F7EBDB;
+}
+.parallax .contents #_period1, .parallax .contents #_period3, .parallax .contents #_period5, .parallax .contents #_period7, .parallax .contents #_period9 {
+  background-color: #0A1018;
+}
+.parallax .contents #_period2, .parallax .contents #_period4, .parallax .contents #_period6, .parallax .contents #_period8 {
+  background-color: #292E32;
+  flex-direction: row-reverse;
+  text-align: right;
 }
 
 .modal {
-    background-color: #F9EDDF;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 0;
-    width: 70%;
-    height: 70%;
-    z-index: 100;
-
-    &::backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 99;
-    }
-    .map {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .layout {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: red;
-            img {
-                height: 80px;
-                width: 80px;
-            }
-        }
-    }
+  background-color: #F9EDDF;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  width: 70%;
+  height: 70%;
+  z-index: 100;
+}
+.modal::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.modal .map {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal .map .layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+.modal .map .layout img {
+  height: 80px;
+  width: 80px;
 }
 
 @keyframes parallaxX {
-    to {
-        transform: 
-            translateX(calc(var(--parallax-speed) * -200px));
-    }
+  to {
+    transform: translateX(calc(var(--parallax-speed) * -200px));
+  }
 }
 @keyframes parallaxY {
-    to {
-        transform: 
-            translateY(calc(var(--parallax-speed) * -200px));
-    }
+  to {
+    transform: translateY(calc(var(--parallax-speed) * -200px));
+  }
 }
-
-
 /* RESPONSIVENESS */
-
 /* 1440px (GOODS) */
 @media (max-width: 1440px) {
-    .parallax {
-        .header {
-            font-size: 5rem;
-        }
-        .parallax-background, 
-        .parallax-background-dojo {
-            top: -45px;
-        }
-
-        .timeline {
-            top: 900px;
-
-            .parallax-foreground {
-                top: -50%;
-            }
-            .textBx {
-                top: -60%;
-            }         
-        }
-        .contents {
-            top: 1800px;
-            width: 100%;
-        }
-    }   
+  .parallax .header {
+    font-size: 5rem;
+  }
+  .parallax .parallax-background,
+  .parallax .parallax-background-dojo {
+    top: -45px;
+  }
+  .parallax .timeline {
+    top: 900px;
+  }
+  .parallax .timeline .parallax-foreground {
+    top: -50%;
+  }
+  .parallax .timeline .textBx {
+    top: -60%;
+  }
+  .parallax .contents {
+    top: 1800px;
+    width: 100%;
+  }
 }
-
 /* PARALLAX IMAGE NEEDS TO BE ZOOMED IN */
-
 /* 1024px (GOODS) */
 @media (max-width: 1024px) {
-    .parallax {
-        .header {
-            font-size: 4rem;
-        }
-        .parallax-background, 
-        .parallax-background-dojo {
-            top: 0px;
-        }
-        .parallax-background {
-            --parallax-speed: -24;    
-        }
-        .parallax-background-dojo {
-            --parallax-speed: -20;    
-        }
-
-        .timeline {
-            top: 640px; 
-            height: 720px;
-
-            .parallax-foreground {
-                top: -30%;
-            }
-
-            .textBx {
-                top: -40%;
-                width: 70%;
-
-                h1 {
-                    width: 80px;
-                    height: 80px;
-                    font-size: 2rem;
-                }
-                p {
-                    font-size: 1rem;
-                }
-                .btns {
-                    min-width: 70%;
-                    gap: 10px;
-    
-                    .btn {
-                        width: 80px;
-                        height: 140px;
-
-                        button {
-                            height: 30px;
-                            width: 30px;
-                        }  
-                        p {
-                            font-size: 0.6rem;
-                        }
-                    }
-                }  
-            }      
-  
-        }
-
-        .contents {
-            top: 1320px;
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .textBx {
-                h1 {
-                    font-size: 1.2rem;
-                }
-                h2 {
-                    font-size: 1rem;
-                }
-                p {
-                    font-size: 0.8rem;
-                }
-            }
-
-            #_period1, #_period2, #_period3, #_period4, #_period5,
-            #_period6, #_period7, #_period8, #_period9 {
-                padding: 50px 50px;
-            }
-        }
-    }   
+  .parallax .header {
+    font-size: 4rem;
+  }
+  .parallax .parallax-background,
+  .parallax .parallax-background-dojo {
+    top: 0px;
+  }
+  .parallax .parallax-background {
+    --parallax-speed: -24;
+  }
+  .parallax .parallax-background-dojo {
+    --parallax-speed: -20;
+  }
+  .parallax .timeline {
+    top: 640px;
+    height: 720px;
+  }
+  .parallax .timeline .parallax-foreground {
+    top: -30%;
+  }
+  .parallax .timeline .textBx {
+    top: -40%;
+    width: 70%;
+  }
+  .parallax .timeline .textBx h1 {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .parallax .timeline .textBx p {
+    font-size: 1rem;
+  }
+  .parallax .timeline .textBx .btns {
+    min-width: 70%;
+    gap: 10px;
+  }
+  .parallax .timeline .textBx .btns .btn {
+    width: 80px;
+    height: 140px;
+  }
+  .parallax .timeline .textBx .btns .btn button {
+    height: 30px;
+    width: 30px;
+  }
+  .parallax .timeline .textBx .btns .btn p {
+    font-size: 0.6rem;
+  }
+  .parallax .contents {
+    top: 1320px;
+  }
+  .parallax .contents h1 {
+    font-size: 2rem;
+  }
+  .parallax .contents .textBx h1 {
+    font-size: 1.2rem;
+  }
+  .parallax .contents .textBx h2 {
+    font-size: 1rem;
+  }
+  .parallax .contents .textBx p {
+    font-size: 0.8rem;
+  }
+  .parallax .contents #_period1, .parallax .contents #_period2, .parallax .contents #_period3, .parallax .contents #_period4, .parallax .contents #_period5,
+  .parallax .contents #_period6, .parallax .contents #_period7, .parallax .contents #_period8, .parallax .contents #_period9 {
+    padding: 50px 50px;
+  }
 }
-
 @media (max-width: 768px) {
-    .parallax {
-        .header {
-            font-size: 3rem;
-            --parallax-speed: -18;    
-        }
-        .parallax-background, .parallax-background-dojo {
-            top: 20px;
-        }
-        .parallax-background {
-            --parallax-speed: -26;        
-        }
-
-        .timeline {
-            top: 540px;
-
-            .parallax-foreground {
-                top: -20%;
-            }
-            .textBx {
-                top: -30%;
-
-                h1 {
-                    font-size: 1.5rem;
-                }
-                p {
-                    font-size: 1rem;
-                }
-                .btns {
-                    min-width: 70%;
-                    gap: 5px;
-    
-                    .btn {
-                        width: 60px;
-                        height: 140px;
-
-                        button {
-                            height: 20px;
-                            width: 20px;
-                        }  
-                        p {
-                            font-size: 0.5rem;
-                        }
-                    }
-                } 
-            }         
-        }
-        
-        .contents {
-            top: 1120px;
-        }
-    }   
+  .parallax .header {
+    font-size: 3rem;
+    --parallax-speed: -18;
+  }
+  .parallax .parallax-background, .parallax .parallax-background-dojo {
+    top: 20px;
+  }
+  .parallax .parallax-background {
+    --parallax-speed: -26;
+  }
+  .parallax .timeline {
+    top: 540px;
+  }
+  .parallax .timeline .parallax-foreground {
+    top: -20%;
+  }
+  .parallax .timeline .textBx {
+    top: -30%;
+  }
+  .parallax .timeline .textBx h1 {
+    font-size: 1.5rem;
+  }
+  .parallax .timeline .textBx p {
+    font-size: 1rem;
+  }
+  .parallax .timeline .textBx .btns {
+    min-width: 70%;
+    gap: 5px;
+  }
+  .parallax .timeline .textBx .btns .btn {
+    width: 60px;
+    height: 140px;
+  }
+  .parallax .timeline .textBx .btns .btn button {
+    height: 20px;
+    width: 20px;
+  }
+  .parallax .timeline .textBx .btns .btn p {
+    font-size: 0.5rem;
+  }
+  .parallax .contents {
+    top: 1120px;
+  }
 }
-
 @media (max-width: 425px) {
-    .loader{
-        width: 100vw;
-        .text{
-            font-size: 1.5rem;
-        }
-    }
-    .parallax {
-        .header {
-            top: 50px;
-            left: 220px;
-            font-size: 2rem;
-        }
-        .parallax-background, .parallax-background-dojo {
-            top: 10px;
-            display: block;
-            max-width: 100%;
-        }
-
-        .parallax-background-dojo {
-            left: -40px;
-        }
-
-        .timeline {
-            top: 340px;
-
-            .parallax-foreground {
-                top: -50%;
-            }
-
-            .textBx {
-                top: -40%;
-
-                h1 {
-                    font-size: 1.5rem;
-                }
-                p {
-                    font-size: 0.8rem;
-                }
-                .btns {
-                    display: none;
-                }  
-            }         
-        }
-
-        .contents {
-            top: 900px;
-
-            h1 {
-                font-size: 2rem;
-                writing-mode: horizontal-tb;
-            }
-
-            img {
-                width: 70%;
-            }
-
-            .textBx {
-                width: 90%;
-                text-align: center;
-
-                h1 {
-                    font-size: 1.2rem;
-                }
-                h2 {
-                    font-size: 1rem;
-                    margin-bottom: 12px;
-                }
-            }
-
-            #_period1, #_period2, #_period3, #_period4, #_period5,
-            #_period6, #_period7, #_period8, #_period9 {
-                padding: 50px 10px;
-                flex-direction: column;
-            }
-        }
-    }   
+  .loader {
+    width: 100vw;
+  }
+  .loader .text {
+    font-size: 1.5rem;
+  }
+  .parallax .header {
+    top: 50px;
+    left: 220px;
+    font-size: 2rem;
+  }
+  .parallax .parallax-background, .parallax .parallax-background-dojo {
+    top: 10px;
+    display: block;
+    max-width: 100%;
+  }
+  .parallax .parallax-background-dojo {
+    left: -40px;
+  }
+  .parallax .timeline {
+    top: 340px;
+  }
+  .parallax .timeline .parallax-foreground {
+    top: -50%;
+  }
+  .parallax .timeline .textBx {
+    top: -40%;
+  }
+  .parallax .timeline .textBx h1 {
+    font-size: 1.5rem;
+  }
+  .parallax .timeline .textBx p {
+    font-size: 0.8rem;
+  }
+  .parallax .timeline .textBx .btns {
+    display: none;
+  }
+  .parallax .contents {
+    top: 900px;
+  }
+  .parallax .contents h1 {
+    font-size: 2rem;
+    writing-mode: horizontal-tb;
+  }
+  .parallax .contents img {
+    width: 70%;
+  }
+  .parallax .contents .textBx {
+    width: 90%;
+    text-align: center;
+  }
+  .parallax .contents .textBx h1 {
+    font-size: 1.2rem;
+  }
+  .parallax .contents .textBx h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .parallax .contents #_period1, .parallax .contents #_period2, .parallax .contents #_period3, .parallax .contents #_period4, .parallax .contents #_period5,
+  .parallax .contents #_period6, .parallax .contents #_period7, .parallax .contents #_period8, .parallax .contents #_period9 {
+    padding: 50px 10px;
+    flex-direction: column;
+  }
 }
-
 @media (max-width: 375px) {
-    .parallax {
-        .header {
-            top: 50px;
-            left: 180px;
-            font-size: 1.5rem;
-        }
-        .parallax-background, .parallax-background-dojo {
-            top: 10px;
-            display: block;
-            max-width: 100%;
-        }
-
-        .parallax-background-dojo {
-            left: -40px;
-        }
-
-        .timeline {
-            top: 320px;
-
-            .parallax-foreground {
-                top: -50%;
-            }
-
-            .textBx {
-                top: -40%;
-
-                h1 {
-                    font-size: 1.2rem;
-                }
-                p {
-                    font-size: 0.8rem;
-                }
-                .btns {
-                    display: none;
-                }  
-            }         
-        }
-
-        .contents {
-            top: 800px;
-
-            h1 {
-                font-size: 1.5rem;
-                writing-mode: horizontal-tb;
-            }
-
-            img {
-                width: 70%;
-            }
-
-            .textBx {
-                width: 90%;
-                text-align: center;
-
-                h1 {
-                    font-size: 1rem;
-                }
-                h2 {
-                    font-size: 0.8rem;
-                    margin-bottom: 12px;
-                }
-            }
-
-            #_period1, #_period2, #_period3, #_period4, #_period5,
-            #_period6, #_period7, #_period8, #_period9 {
-                padding: 50px 10px;
-                flex-direction: column;
-            }
-        }
-    }   
-}
+  .parallax .header {
+    top: 50px;
+    left: 180px;
+    font-size: 1.5rem;
+  }
+  .parallax .parallax-background, .parallax .parallax-background-dojo {
+    top: 10px;
+    display: block;
+    max-width: 100%;
+  }
+  .parallax .parallax-background-dojo {
+    left: -40px;
+  }
+  .parallax .timeline {
+    top: 320px;
+  }
+  .parallax .timeline .parallax-foreground {
+    top: -50%;
+  }
+  .parallax .timeline .textBx {
+    top: -40%;
+  }
+  .parallax .timeline .textBx h1 {
+    font-size: 1.2rem;
+  }
+  .parallax .timeline .textBx p {
+    font-size: 0.8rem;
+  }
+  .parallax .timeline .textBx .btns {
+    display: none;
+  }
+  .parallax .contents {
+    top: 800px;
+  }
+  .parallax .contents h1 {
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+  }
+  .parallax .contents img {
+    width: 70%;
+  }
+  .parallax .contents .textBx {
+    width: 90%;
+    text-align: center;
+  }
+  .parallax .contents .textBx h1 {
+    font-size: 1rem;
+  }
+  .parallax .contents .textBx h2 {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+  .parallax .contents #_period1, .parallax .contents #_period2, .parallax .contents #_period3, .parallax .contents #_period4, .parallax .contents #_period5,
+  .parallax .contents #_period6, .parallax .contents #_period7, .parallax .contents #_period8, .parallax .contents #_period9 {
+    padding: 50px 10px;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

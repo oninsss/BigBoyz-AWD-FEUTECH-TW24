@@ -1,573 +1,497 @@
-@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-@import url('https://fonts.cdnfonts.com/css/sakurata');
-
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/sakurata");
 * {
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease-in-out;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #F5F5F5;
-    overflow-x: hidden;
-    min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #F5F5F5;
+  overflow-x: hidden;
+  min-width: 100%;
 }
 
-.loader{   
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212;
-    transition: opacity 1.75s, visibility 1.75s;
-
-    .text{
-        position: relative;
-        color: white;
-        font-size: 3rem;
-        font-weight: 400;
-        font-family: 'sakurata', sans-serif;
-    }
-
-    .text.first-text::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #121212;
-        border-left: 2px solid red;
-        animation: typing 2.5s steps(8) infinite;
-    }
+.loader {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  transition: opacity 1.75s, visibility 1.75s;
+}
+.loader .text {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "sakurata", sans-serif;
+}
+.loader .text.first-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  border-left: 2px solid red;
+  animation: typing 2.5s steps(8) infinite;
 }
 
-.loader-hidden{
-    opacity: 0;
-    visibility: hidden;
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes typing {
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0;
-    }
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-
 .header {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(0deg, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0),  rgba(13, 13, 13, 0.9)), url(https://img.peapix.com/50ef2aee357748149a91bfe936092e52_UHD.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    #_headerVid {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        z-index: -1;
-    }
-    
-    .textBx {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 60px;
-
-        h1 {
-            font-family: 'sakurata', sans-serif;
-            font-size: 5rem;
-            font-weight: 700;
-            z-index: 2;
-            margin-top: -20px;
-            text-shadow: 2px 2px #000;
-        }
-        h2 {
-            color: #A9111B;
-            font-size: 3rem;
-            font-weight: 600;
-            z-index: 2;
-            text-shadow: 2px 2px #000;
-        }
-    }
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(0deg, rgb(13, 13, 13), rgba(13, 13, 13, 0), rgba(13, 13, 13, 0.9)), url(https://img.peapix.com/50ef2aee357748149a91bfe936092e52_UHD.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header #_headerVid {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.header .textBx {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 60px;
+}
+.header .textBx h1 {
+  font-family: "sakurata", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  z-index: 2;
+  margin-top: -20px;
+  text-shadow: 2px 2px #000;
+}
+.header .textBx h2 {
+  color: #A9111B;
+  font-size: 3rem;
+  font-weight: 600;
+  z-index: 2;
+  text-shadow: 2px 2px #000;
 }
 
 .places-body {
-    background-color: rgb(13, 13, 13);
-    min-height: 740px;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-
-    .textBx {
-        width: 40%;
-        text-align: left;
-        padding: 20px 2% 20px 5%;
-        z-index: 1;
-
-        h2 {
-            font-size: 2rem;
-            color:#A9111B;
-            margin-bottom: -30px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        button {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #A9111B;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #F5F5F5;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-
-            &:hover{
-                background-color: white;
-                color: #A9111B;
-            }
-        }
-    }
-
-    .cards {
-        height: 100%;
-        gap: 20px;
-        padding: 60px 50px;
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        text-align: center;
-        color: #fff;
-
-        &::-webkit-scrollbar {
-            background-color: transparent;
-        }
-
-        .card {
-            background-size: cover;
-            background-position: center;
-            background-color: #000;
-            width: 400px;
-            height: 600px;
-            border-radius: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex: 0 0 auto;
-            flex-direction: column;
-            justify-content: end;
-            align-items: center;
-            transition: all s ease;
-            cursor: pointer;
-            overflow: hidden;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-
-            .textBx {
-                width: 100%;
-                height: 25%;
-                background-color: rgba(0, 0, 0, 0.7);
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
-                text-align: center;
-
-                h2 {
-                    color: #F5F5F5;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                }
-            }
-        }
-
-        #_card1 {
-            background-image: url('https://ik.imagekit.io/tvlk/blog/2023/08/shutterstock_2297338755.jpg?tr=dpr-2,w-675');
-        }
-        #_card2 {
-            background-image: url('https://ik.imagekit.io/tvlk/blog/2023/08/shutterstock_1135776713.jpg?tr=dpr-2,w-675');
-        }
-        #_card3 {
-            background-image: url('https://www.datocms-assets.com/101439/1701069415-yakushima-island.jpg?auto=format&fit=crop&h=600&w=968');
-        }
-        #_card4 {
-            background-image: url('https://ik.imagekit.io/tvlk/blog/2023/08/shutterstock_102831677.jpg?tr=dpr-2,w-675');
-        }
-        #_card5 {
-            background-image: url('https://res.klook.com/image/upload/activities/ggmxnuv462rky25ml8lk.jpg');
-        }
-    }
+  background-color: rgb(13, 13, 13);
+  min-height: 740px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.places-body .textBx {
+  width: 40%;
+  text-align: left;
+  padding: 20px 2% 20px 5%;
+  z-index: 1;
+}
+.places-body .textBx h2 {
+  font-size: 2rem;
+  color: #A9111B;
+  margin-bottom: -30px;
+}
+.places-body .textBx h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.places-body .textBx p {
+  font-size: 1.2rem;
+}
+.places-body .textBx button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #A9111B;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F5F5F5;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.places-body .textBx button:hover {
+  background-color: white;
+  color: #A9111B;
+}
+.places-body .cards {
+  height: 100%;
+  gap: 20px;
+  padding: 60px 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  color: #fff;
+}
+.places-body .cards::-webkit-scrollbar {
+  background-color: transparent;
+}
+.places-body .cards .card {
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  transition: all s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.places-body .cards .card:hover {
+  transform: scale(1.05);
+}
+.places-body .cards .card .textBx {
+  width: 100%;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+.places-body .cards .card .textBx h2 {
+  color: #F5F5F5;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.places-body .cards #_card1 {
+  background-image: url("https://ik.imagekit.io/tvlk/blog/2023/08/shutterstock_2297338755.jpg?tr=dpr-2,w-675");
+}
+.places-body .cards #_card2 {
+  background-image: url("https://ik.imagekit.io/tvlk/blog/2023/08/shutterstock_1135776713.jpg?tr=dpr-2,w-675");
+}
+.places-body .cards #_card3 {
+  background-image: url("https://www.datocms-assets.com/101439/1701069415-yakushima-island.jpg?auto=format&fit=crop&h=600&w=968");
+}
+.places-body .cards #_card4 {
+  background-image: url("https://ik.imagekit.io/tvlk/blog/2023/08/shutterstock_102831677.jpg?tr=dpr-2,w-675");
+}
+.places-body .cards #_card5 {
+  background-image: url("https://res.klook.com/image/upload/activities/ggmxnuv462rky25ml8lk.jpg");
 }
 
 .features {
-    background: linear-gradient(45deg, #010101, #121212);
-    width: 100%;
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15%;
-    color: #F5F5F5;
-
-    .feature {
-        height: 200px;
-        width: 180px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
-        span  {
-            height: 60px;
-            font-size: 3rem;
-        }
-
-        h6 {
-            color: #F5F5F5;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: -5px;
-            overflow-y: hidden;
-        }
-
-        p {
-            font-size: 0.8rem;
-            overflow-y: hidden;
-        }
-    }
-
+  background: linear-gradient(45deg, #010101, #121212);
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  color: #F5F5F5;
+}
+.features .feature {
+  height: 200px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.features .feature span {
+  height: 60px;
+  font-size: 3rem;
+}
+.features .feature h6 {
+  color: #F5F5F5;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: -5px;
+  overflow-y: hidden;
+}
+.features .feature p {
+  font-size: 0.8rem;
+  overflow-y: hidden;
 }
 
 .about {
-    background: linear-gradient(135deg, #010101, #121212);
-    height: 720px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 50px;
-
-    .imgBx {
-        width: 50%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-
-        img {
-            width: 80%;
-            object-fit: cover;
-        }
-    }
-
-    .infoBx {
-        width: 50%;
-
-        .textBxAbout {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            z-index: 1;
-            text-align: left;
-
-            h2 {
-                font-size: 2rem;
-                font-weight: 600;
-                color: #A9111B;
-                margin-bottom: -30px;
-            }
-
-            h1 {
-                width: 100%;
-                font-size: 3rem;
-                font-weight: 600;
-            }
-
-            p {
-                font-size: 1.2rem;
-                font-weight: 100;
-                margin-top: 10px;
-            }
-        }
-
-        button {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #A9111B;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #F5F5F5;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-
-            &:hover{
-                background-color: white;
-                color: #A9111B;
-            }
-        }
-    }
+  background: linear-gradient(135deg, #010101, #121212);
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+}
+.about .imgBx {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.about .imgBx img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .infoBx {
+  width: 50%;
+}
+.about .infoBx .textBxAbout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  z-index: 1;
+  text-align: left;
+}
+.about .infoBx .textBxAbout h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #A9111B;
+  margin-bottom: -30px;
+}
+.about .infoBx .textBxAbout h1 {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.about .infoBx .textBxAbout p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-top: 10px;
+}
+.about .infoBx button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #A9111B;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F5F5F5;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.about .infoBx button:hover {
+  background-color: white;
+  color: #A9111B;
 }
 
 #_mapModal {
-    max-width: 60%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(10px);
-    background-color: rgba(245, 245, 245, 0.15);
-    border: none;
-    border-radius: 10px;
-    padding: 30px;
-
-    &::backdrop {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    iframe {
-        border: none;
-    }
-
-    button {
-        width: 100%;
-        margin: 20px 0 0 0;
-        padding: 10px 20px;
-        background-color: #A9111B;
-        border: none;
-        border-radius: 5px;
-        color: #F5F5F5;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-            background-color: white;
-            color: #A9111B;
-        }
-    }
-
+  max-width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(245, 245, 245, 0.15);
+  border: none;
+  border-radius: 10px;
+  padding: 30px;
+}
+#_mapModal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#_mapModal iframe {
+  border: none;
+}
+#_mapModal button {
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 10px 20px;
+  background-color: #A9111B;
+  border: none;
+  border-radius: 5px;
+  color: #F5F5F5;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#_mapModal button:hover {
+  background-color: white;
+  color: #A9111B;
 }
 
 @keyframes slideUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100px);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
 }
-
 @media (max-width: 1024px) {
-    .places-body {
-        flex-direction: column;
-        gap: 20px;
-
-        .textBx {
-            width: 90%;
-            padding: 20px 5% 20px 5%;
-            text-align: center;
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            p {
-                font-size: 1.2rem;
-            }
-        }
-
-        .cards {
-            padding: 20px 10px;
-            gap: 30px;
-
-            .card {
-                width: 60%;
-                height: 300px;
-                .textBx {
-                    h2 {
-                        font-size: 1rem;
-                    }
-                }
-            }
-        }
-    }
-
-    .about {
-        height: 100%;
-        padding: 20px;
-
-        .imgBx {
-            width: 40%;
-            height: 50%;
-        }
-        .infoBx {
-            .textBxAbout {
-                h2 {
-                    font-size: 1.5rem;
-                    margin-bottom: -10px;
-                }
-                h1 {
-                    font-size: 2rem;
-                }
-                p {
-                    font-size: 1rem;
-                }
-            }
-            button {
-                margin-bottom: 60px;
-            }
-        }
-    }
+  .places-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .places-body .textBx {
+    width: 90%;
+    padding: 20px 5% 20px 5%;
+    text-align: center;
+  }
+  .places-body .textBx h2 {
+    font-size: 1.8rem;
+  }
+  .places-body .textBx h1 {
+    font-size: 2.2rem;
+  }
+  .places-body .textBx p {
+    font-size: 1.2rem;
+  }
+  .places-body .cards {
+    padding: 20px 10px;
+    gap: 30px;
+  }
+  .places-body .cards .card {
+    width: 60%;
+    height: 300px;
+  }
+  .places-body .cards .card .textBx h2 {
+    font-size: 1rem;
+  }
+  .about {
+    height: 100%;
+    padding: 20px;
+  }
+  .about .imgBx {
+    width: 40%;
+    height: 50%;
+  }
+  .about .infoBx .textBxAbout h2 {
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+  }
+  .about .infoBx .textBxAbout h1 {
+    font-size: 2rem;
+  }
+  .about .infoBx .textBxAbout p {
+    font-size: 1rem;
+  }
+  .about .infoBx button {
+    margin-bottom: 60px;
+  }
 }
-
 @media (max-width: 768px) {
-    .loader{
-        width: 100vw;
-        .text{
-            font-size: 2rem;
-        }
-    }
-    .places-body {
-        width: 100%;
-
-        .cards {
-            width: 90%;
-            .card {
-                width: 30%;
-            }
-        }
-    }
-
-    .features {
-        gap: 10px;
-
-        .feature {
-            height: 150px;
-        }
-    }
-
-    .about {
-        flex-direction: column;
-        gap: 20px;
-
-        .imgBx {
-            width: 100%;
-            height: 50%;
-        }
-        .infoBx {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            .textBxAbout {
-                width: 70%;
-                height: 50%;
-                text-align: center;
-                h2 {
-                    width: 100%;
-                    font-size: 1.2rem;
-                    margin-bottom: -10px;
-                }
-
-                h1 {
-                    font-size: 1.5rem;
-                }
-
-                p {
-                    font-size: 1rem;
-                }
-            }
-
-        }
-
-        button {
-            margin-bottom: 80px;
-        }
-    }
+  .loader {
+    width: 100vw;
+  }
+  .loader .text {
+    font-size: 2rem;
+  }
+  .places-body {
+    width: 100%;
+  }
+  .places-body .cards {
+    width: 90%;
+  }
+  .places-body .cards .card {
+    width: 30%;
+  }
+  .features {
+    gap: 10px;
+  }
+  .features .feature {
+    height: 150px;
+  }
+  .about {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about .imgBx {
+    width: 100%;
+    height: 50%;
+  }
+  .about .infoBx {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .infoBx .textBxAbout {
+    width: 70%;
+    height: 50%;
+    text-align: center;
+  }
+  .about .infoBx .textBxAbout h2 {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: -10px;
+  }
+  .about .infoBx .textBxAbout h1 {
+    font-size: 1.5rem;
+  }
+  .about .infoBx .textBxAbout p {
+    font-size: 1rem;
+  }
+  .about button {
+    margin-bottom: 80px;
+  }
 }
-
 @media (max-width: 425px) {
-    .loader{
-        width: 100vw;
-        .text{
-            font-size: 2rem;
-        }
-    }
-    .navbar {
-        nav {
-            .topbar {
-                margin: 0;
-            }
-        }
-    }
-    .loader{
-        .text{
-            font-size: 1rem;
-        }
-    }
-    .header {
-        .textBx {
-            width: 62%;
-            h1 {
-                font-size: 3rem;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-        }
-    }
-
-    .places-body {
-        .cards {
-            padding: 0px 15px;
-            .card {
-                width: 50%;
-            }
-        }
-    }
-
-    #_mapModal {
-        width: 200px;
-    }
-}
+  .loader {
+    width: 100vw;
+  }
+  .loader .text {
+    font-size: 2rem;
+  }
+  .navbar nav .topbar {
+    margin: 0;
+  }
+  .loader .text {
+    font-size: 1rem;
+  }
+  .header .textBx {
+    width: 62%;
+  }
+  .header .textBx h1 {
+    font-size: 3rem;
+  }
+  .header .textBx h2 {
+    font-size: 2rem;
+  }
+  .places-body .cards {
+    padding: 0px 15px;
+  }
+  .places-body .cards .card {
+    width: 50%;
+  }
+  #_mapModal {
+    width: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */
