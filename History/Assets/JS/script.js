@@ -3,7 +3,7 @@ const topBar = document.getElementById('_topBar');
 const navLinks = document.querySelectorAll('a');
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 760){
+    if(window.scrollY > 500){
         navBar.style.backdropFilter = 'blur(10px)';
         topBar.querySelectorAll('a').forEach(link => {
             link.style.color = '#FFF';
@@ -16,25 +16,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-const modal = document.getElementById('_timeline');
-const openModal = document.getElementById('_openTimeline');
-const closeModal = document.getElementById('_closeTimeline');
-
-openModal.addEventListener('click', () => {
-    modal.showModal();
-});
-
-closeModal.addEventListener('click', () => {
-    modal.close();
-});
-
-
 //Turn off Parallax upon scrolling down
 const backgroundElements = document.querySelectorAll('.parallax-background, .parallax-background-dojo');
 
 function hasScrolledDown() {
-    return window.scrollY > 2000; 
+    return window.scrollY > 1000; 
 }
 
 function removeBackground() {

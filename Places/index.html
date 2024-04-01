@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link rel="icon" href="../Assets/Images/GroupLogo.png">
+    <link rel="stylesheet" href="Assets/Styles/style.css">
+    <link rel="stylesheet" href="../Assets/Style/navbFootStyle.css">
+    <link rel="stylesheet" href="../Assets/Style/contentLoader.css" class="css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <div class="loader">
+        <span class="text first-text">
+            Explore
+        </span>
+    </div>
+<!--     
+    <div class="navbar" id="_navBar">
+        <nav>
+            <ul class="sidebar">
+                <li >
+                    <a href="../index.html">
+                        <svg id="_close" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
+                            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9.15625,6.3125l-2.84375,2.84375l15.84375,15.84375l-15.9375,15.96875l2.8125,2.8125l15.96875,-15.9375l15.9375,15.9375l2.84375,-2.84375l-15.9375,-15.9375l15.84375,-15.84375l-2.84375,-2.84375l-15.84375,15.84375z"></path></g></g>
+                        </svg>
+                    </a>
+                    
+                </li>
+                <li><a href="../index.html"><img src="../Assets/Images/GroupLogo.png" alt=""></a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="../Food/index.html">Foods</a></li>
+                <li><a href="../Culture/index.html">Culture</a></li>
+                <li><a href="../History/index.html">History</a></li>
+            </ul>
+            <ul class="topbar" id="_topBar">
+                <div class="logo">
+                    <li><a href="../index.html"><img src="../Assets/Images/GroupLogo.png" alt=""></a></li>
+                </div>
+                
+                <div class="rightBar" id="_rightBar">
+                    <li><a href="#">Places</a></li>
+                    <li><a href="../Food/index.html">Foods</a></li>
+                    <li><a href="../Culture/index.html">Culture</a></li>
+                    <li><a href="../History/index.html">History</a></li>
+                </div>
+
+                <div class="hamburger">
+                    <li id="_hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+                    </li>
+                </div>
+                
+            </ul>
+        </nav>
+    </div> -->
+
+    <div class="header">
+        <div class="textBx">
+            <h2>日出ずる国</h2>
+            <h1>Land of the Rising Sun</h1>
+        </div>
+        <video autoplay muted loop id="_headerVid">
+        </video>
+    </div>
+
+    <div class="places-body">
+        <div class="textBx hidden">
+            <h2>人気の目的地</h2>
+            <h1>Top 5 Destinations</h1>
+            <p>Discover Japan's Top Tourist Destinations & Must-Visit Places</p>
+            <a href="https://www.cebupacificair.com/en-PH/pages/explore/international/flights-to-Tokyo?nohf=true&header=City%20Guide"><button>Book Now</button></a>
+        </div>
+        <div class="cards hidden">
+            <div class="card" id="_card1" onclick="pageContents1()">
+                <div class="textBx">
+                    <h2>Tokyo Disneyland and DisneySea</h2>
+                </div>
+            </div>
+            <div class="card" id="_card2" onclick="pageContents2()">
+                <div class="textBx">
+                    <h2>Kyoto's temples and shrines</h2>
+                </div>
+            </div>
+            <div class="card" id="_card3" onclick="pageContents3()">
+                <div class="textBx">
+                    <h2>Yakushima</h2>
+                </div>  
+            </div>
+            <div class="card" id="_card4" onclick="pageContents4()">
+                <div class="textBx">
+                    <h2>Mount Fuji</h2>
+                </div>
+            </div>
+            <div class="card" id="_card5" onclick="pageContents5()">
+                <div class="textBx">
+                    <h2>Akihabara</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature hidden" id="_feature1">
+            <span class="material-symbols-outlined">
+                travel
+            </span>
+            <h6>Visits</h6>
+        </div>
+        <div class="feature hidden" id="_feature2">
+            <span class="material-symbols-outlined">
+                recommend
+            </span>
+            <h6>Ratings</h6>
+        </div>
+        <div class="feature hidden" id="_feature3">
+            <span class="material-symbols-outlined">
+                routine
+            </span>
+            <h6>Open</h6>        
+        </div>    
+    </div>
+
+    <div class="about">
+        <div class="imgBx hidden">
+            <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        </div>
+        <div class="infoBx hidden">
+            <div class="textBxAbout">
+                <h2>日出ずる国</h2>
+                <h1>Land of the Rising Sun</h1>
+                <p>
+                    Japan is an island nation in East Asia, located in the Pacific Ocean. 
+                    It is made up of four main islands and thousands of smaller islands. 
+                    Japan is known for its rich history, unique culture, and stunning natural 
+                    landscapes. From the bustling streets of Tokyo to the serene temples of 
+                    Kyoto, there is something for everyone in Japan. Whether you're interested 
+                    in history, culture, food, or nature, Japan has it all. Discover the Land 
+                    of the Rising Sun and experience the beauty and wonder of Japan.
+                </p>
+            </div>
+            <button id="_openMap">View Location</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="links">
+                <a href="../index.html">Home</a>
+                <a href="../Places/index.html">Places</a>
+                <a href="../Food/index.html">Food</a>
+                <a href="../History/index.html">History</a>
+                <a href="../Culture/index.html">Culture</a>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Japan. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+<dialog id="_mapModal">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17168227.346571904!2d132.79759281862178!3d34.22057174483484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e1!3m2!1sen!2sph!4v1711911967667!5m2!1sen!2sph" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>    
+    <button id="_closeMap">Close</button>
+</dialog>
+
+<script src="./Assets/JS/script.js"></script>
+<script src="../Assets/JS/script.js"></script>
+<script src="../Assets/JS/contentLoader.js"></script>
+</body>
+</html>
