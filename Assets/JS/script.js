@@ -2,8 +2,11 @@
 const text = document.querySelector('.first-text')
 const mainText = document.querySelector('.mainText')
 const gradientBg = document.querySelector('.gradientBg')
+const loader = document.getElementById('_loader')
 
 const textLoad = () =>{
+    var a = window.screen.width;
+    loader.style.width = 'a';
     setTimeout(() => {
         text.textContent = 'Japan';
     }, 0);

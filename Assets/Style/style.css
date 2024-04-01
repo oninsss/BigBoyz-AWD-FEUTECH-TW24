@@ -890,6 +890,12 @@ body{
 }
 
 @media (max-width: 425px) {
+    .loader{
+        width: 10vw;
+        .text{
+            font-size: 2rem;
+        }
+    }
     .container{
         .topPart{
             .mainText{

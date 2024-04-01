@@ -339,7 +339,7 @@ header {
 
 .other__container {
   padding: 5rem 0;
-  background-image: linear-gradient(45deg, #010101, #121212);
+  background-image: linear-gradient(25deg, #010101, #121212);
 }
 
 .other__grid {
@@ -391,7 +391,7 @@ height: 300px;
 }
 .gallery__container {
   padding: 5rem 1rem;
-  background-image: linear-gradient(45deg, #010101, #121212);
+  background-image: linear-gradient(150deg, #010101, #121212);
 }
 
 .gallery__grid {

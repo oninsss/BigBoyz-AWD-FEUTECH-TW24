@@ -38,6 +38,7 @@
             display: flex;
             align-items: center;
             transition: all 0.5s ease-in-out;
+            overflow: hidden;
 
             &:hover{
                 color: red;
@@ -101,6 +102,7 @@
     height: 300px;
     background: rgb(18,18,18);
     background: radial-gradient(circle, rgba(18,18,18,1) 15%, rgba(18,18,18,1) 60%, rgba(1,1,1,1) 100%);
+    background: linear-gradient(180deg, #121212,  #010101);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,11 +119,31 @@
         gap: 30px;
         margin: 0 90px;
 
+        .links{
+            display: flex;
+            bottom: 0;
+            a{
+                /* background-color: #A9111B; */
+                border: 1px solid #A9111B;
+                border-radius: 20px;
+                color: white;
+                padding: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        
+
         .copyright {
             min-width: 640px;
-            border-top: 1px solid rgba(144, 144, 144, 0.2);
+            border-top: 1px solid #A9111B;
             padding-top: 30px;
             text-align: center;
+
+            p{
+                color: white;
+            }
         }
     }
 

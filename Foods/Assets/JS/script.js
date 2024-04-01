@@ -2,8 +2,10 @@
 const text = document.querySelector('.first-text')
 const mainText = document.querySelector('.mainText')
 const gradientBg = document.querySelector('.gradientBg')
+const loader = document.getElementById('_loader')
 
 const textLoad = () =>{
+    loader.style.width = '100vw';
     setTimeout(() => {
         text.textContent = 'Sushi';
     }, 0);

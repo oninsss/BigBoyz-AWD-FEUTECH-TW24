@@ -742,7 +742,7 @@ body{
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .container{
         .topPart{
             flex-direction: column-reverse;
@@ -899,18 +899,17 @@ body{
                     }
                     
                 }
-                .topBotBottom{
+                .tpBotBottom{
                     padding: 20px;
                     /* flex-wrap: wrap;
                     overflow: auto; */
                     
                     .cards{
                         width: 80vw;
-                        
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
                         gap: 10px;
-                        
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
 
                         .card{
                             width: 100px;
