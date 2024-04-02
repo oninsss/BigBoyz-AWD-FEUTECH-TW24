@@ -525,14 +525,14 @@ body {
     .loader{
         width: 100vw;
         .text{
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
     }
     .parallax {
         .header {
             top: 50px;
             left: 220px;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .parallax-background, .parallax-background-dojo {
             top: 10px;
