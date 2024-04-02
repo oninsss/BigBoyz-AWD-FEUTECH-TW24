@@ -1,1072 +1,788 @@
-@import url('https://fonts.cdnfonts.com/css/poppins');
-@import url('https://fonts.cdnfonts.com/css/sakurata');
-
-*{
-    font-family:'Poppins', sans-serif;
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/sakurata");
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    background: linear-gradient(45deg, #121212, #010101, 135deg, #121212, #010101, 45deg, #121212, #010101);
-    
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background: linear-gradient(45deg, #121212, #010101, 135deg, #121212, #010101, 45deg, #121212, #010101);
 }
 
-.loader{
-    
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212;
-    transition: opacity 1.75s, visibility 1.75s;
-
-    .text{
-        position: relative;
-        color: white;
-        font-size: 3rem;
-        font-weight: 400;
-        font-family: 'sakurata', sans-serif;
-    }
-
-    .text.first-text::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #121212;
-        border-left: 2px solid red;
-        animation: typing 1.5s steps(5) infinite;
-    }
+.loader {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  transition: opacity 1.75s, visibility 1.75s;
+}
+.loader .text {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "sakurata", sans-serif;
+}
+.loader .text.first-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  border-left: 2px solid red;
+  animation: typing 1.5s steps(5) infinite;
 }
 
-.loader-hidden{
-    opacity: 0;
-    visibility: hidden;
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes typing {
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0;
-    }
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-.container{
-    .topPart{
-        width: 100%;
-        height: 100vh;
-        
-        
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        overflow-x: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .mainText{
-            position: relative;
-            z-index: 2;
-
-            
-            
-            h1{
-                font-size: 10rem;
-                font-weight: 400;
-                font-family: 'sakurata', sans-serif;
-                letter-spacing: 20px;
-                color: white;
-                text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
-            }
-            
-            
-        }
-
-        .red{
-            background-color: #A9111B;
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            border-radius: 50%;
-            opacity: 40%;
-        }
-
-        .scrollMouse{
-            position: absolute;
-            bottom: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-weight: 400;
-            font-size: 0.75rem;
-            letter-spacing: 5px;
-            cursor: pointer;
-            
-            
-
-            .mouseIcon{
-                width: 15px;
-                height: 30px;
-                border: 2px solid white;
-                border-radius: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-
-                .scroll{
-                    width: 2px;
-                    height: 4px;
-                    background-color: white;
-                    border-radius: 40%;
-                    position: absolute;
-                    top: 5px;
-                    animation: scroll 6s infinite;
-                }
-            
-            }
-
-            p{
-                animation: breathing 2.5s infinite;
-            }
-        }
-    }
-
-    
-
-    .secondPart{
-        background-color: rgb(13, 13, 13);
-        background: linear-gradient(135deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 100px;
-        padding: 100px;
-        height: 700px;
-
-        .design{
-            position: absolute;
-            right: 0;
-            transform: rotate(180deg);
-            z-index: 0;
-
-            img{
-                width: 1320px;
-                opacity: 1%;
-            }
-        }
-
-        .spLeft{
-            z-index: 1;
-
-            img{
-                width: 600px;
-                border-radius: 20px;
-            }
-        }
-
-        .spRight{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: 600px;
-            z-index: 1;
-            color: white;
-
-            .pageName{
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-
-                h3{
-                    writing-mode: vertical-rl;
-                    text-orientation: upright;
-                    text-align: center;
-
-                }
-            }
-
-            h1{
-                color: #A9111B;
-                font-size: 10rem;
-                margin: 0;
-            }
-
-            p{
-                font-weight: 400;
-                font-size: 0.9rem;
-                line-height: 2rem;
-            }
-
-            .checkHere{
-                button{
-                    background-color: #A9111B;
-                    color: white;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-top: 50px;
-                    transition: all 0.5s ease-in-out;
-
-                    &:hover{
-                        background-color: white;
-                        color: #A9111B;
-                    }
-                
-                }
-            }
-        }
-    }
-
-    .thirdPart{
-        background-color: rgb(13, 13, 13);
-        background: linear-gradient(45deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 100px;
-        padding: 100px;
-        height: 700px;
-
-        .design{
-            position: absolute;
-            left: -100px;
-            /* transform: rotate(90deg); */
-            z-index: 0;
-
-            img{
-                transform: rotate(25deg);
-                width: 820px;
-                opacity: 4%;
-            }
-        }
-
-        .tpLeft{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-            height: 600px;
-            z-index: 1;
-            color: white;
-
-            .pageName{
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-
-                h3{
-                    writing-mode: vertical-rl;
-                    text-orientation: upright;
-                    text-align: center;
-
-                }
-            }
-
-            h1{
-                color: #A9111B;
-                font-size: 10rem;
-                margin: 0;
-            }
-
-            p{
-                font-weight: 400;
-                font-size: 0.9rem;
-                line-height: 2rem;
-                text-align: right;
-            }
-
-            .checkHere{
-                button{
-                    background-color: #A9111B;
-                    color: white;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-top: 50px;
-                    transition: all 0.5s ease-in-out;
-
-                    &:hover{
-                        background-color: white;
-                        color: #A9111B;
-                    }
-                
-                }
-            }
-        }
-
-        .tpRight{
-            z-index: 1;
-
-            img{
-                width: 600px;
-                border-radius: 20px;
-            }
-        }
-    }
-
-    .fourthPart{
-        background-color: rgb(13, 13, 13);
-        background: linear-gradient(135deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 100px;
-        padding: 100px;
-        height: 700px;
-
-        .design{
-            position: absolute;
-            right: 0px;
-            z-index: 0;
-
-            img{
-                width: 1320px;
-                opacity: 4%;
-            }
-        }
-
-        .fpLeft{
-            z-index: 1;
-
-            img{
-                width: 600px;
-                border-radius: 20px;
-            }
-        }
-
-        .fpRight{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: 600px;
-            z-index: 1;
-            color: white;
-
-            .pageName{
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-
-                h3{
-                    writing-mode: vertical-rl;
-                    text-orientation: upright;
-                    text-align: center;
-
-                }
-            }
-
-            h1{
-                color: #A9111B;
-                font-size: 10rem;
-                margin: 0;
-            }
-
-            p{
-                font-weight: 400;
-                font-size: 0.9rem;
-                line-height: 2rem;
-            }
-
-            .checkHere{
-                button{
-                    background-color: #A9111B;
-                    color: white;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-top: 50px;
-                    transition: all 0.5s ease-in-out;
-
-                    &:hover{
-                        background-color: white;
-                        color: #A9111B;
-                    }
-                
-                }
-            }
-        }
-    
-    }
-
-    .fifthPart{
-        background-color: rgb(13, 13, 13);
-        background: linear-gradient(45deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 100px;
-        padding: 100px;
-        height: 700px;
-
-        .design{
-            position: absolute;
-            left: -50px;
-            /* transform: rotate(360deg); */
-            z-index: 0;
-
-            img{
-                /* transform: rotate(25deg); */
-                width: 1020px;
-                opacity: 4%;
-            }
-        }
-
-        .ffpLeft{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-            height: 600px;
-            z-index: 1;
-            color: white;
-
-            .pageName{
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-
-                h3{
-                    writing-mode: vertical-rl;
-                    text-orientation: upright;
-                    text-align: center;
-
-                }
-            }
-
-            h1{
-                color: #A9111B;
-                font-size: 10rem;
-                margin: 0;
-            }
-
-            p{
-                font-weight: 400;
-                font-size: 0.9rem;
-                line-height: 2rem;
-                text-align: right;
-            }
-
-            .checkHere{
-                button{
-                    background-color: #A9111B;
-                    color: white;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-top: 50px;
-                    transition: all 0.5s ease-in-out;
-
-                    &:hover{
-                        background-color: white;
-                        color: #A9111B;
-                    }
-                
-                }
-            }
-        }
-
-        .ffpRight{
-            z-index: 1;
-
-            img{
-                width: 600px;
-                border-radius: 20px;
-            }
-        }
-    
-    }
+.container .topPart {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.container .topPart .mainText {
+  position: relative;
+  z-index: 2;
+}
+.container .topPart .mainText h1 {
+  font-size: 10rem;
+  font-weight: 400;
+  font-family: "sakurata", sans-serif;
+  letter-spacing: 20px;
+  color: white;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+.container .topPart .red {
+  background-color: #A9111B;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 40%;
+}
+.container .topPart .scrollMouse {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+.container .topPart .scrollMouse .mouseIcon {
+  width: 15px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container .topPart .scrollMouse .mouseIcon .scroll {
+  width: 2px;
+  height: 4px;
+  background-color: white;
+  border-radius: 40%;
+  position: absolute;
+  top: 5px;
+  animation: scroll 6s infinite;
+}
+.container .topPart .scrollMouse p {
+  animation: breathing 2.5s infinite;
+}
+.container .secondPart {
+  background-color: rgb(13, 13, 13);
+  background: linear-gradient(135deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  padding: 100px;
+  height: 700px;
+}
+.container .secondPart .design {
+  position: absolute;
+  right: 0;
+  transform: rotate(180deg);
+  z-index: 0;
+}
+.container .secondPart .design img {
+  width: 1320px;
+  opacity: 1%;
+}
+.container .secondPart .spLeft {
+  z-index: 1;
+}
+.container .secondPart .spLeft video {
+  width: 600px;
+  border-radius: 20px;
+}
+.container .secondPart .spRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 600px;
+  z-index: 1;
+  color: white;
+}
+.container .secondPart .spRight .pageName {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.container .secondPart .spRight .pageName h3 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+}
+.container .secondPart .spRight h1 {
+  color: #A9111B;
+  font-size: 10rem;
+  margin: 0;
+}
+.container .secondPart .spRight p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+.container .secondPart .spRight .checkHere button {
+  background-color: #A9111B;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.container .secondPart .spRight .checkHere button:hover {
+  background-color: white;
+  color: #A9111B;
+}
+.container .thirdPart {
+  background-color: rgb(13, 13, 13);
+  background: linear-gradient(45deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  padding: 100px;
+  height: 700px;
+}
+.container .thirdPart .design {
+  position: absolute;
+  left: -100px;
+  /* transform: rotate(90deg); */
+  z-index: 0;
+}
+.container .thirdPart .design img {
+  transform: rotate(25deg);
+  width: 820px;
+  opacity: 4%;
+}
+.container .thirdPart .tpLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 600px;
+  z-index: 1;
+  color: white;
+}
+.container .thirdPart .tpLeft .pageName {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.container .thirdPart .tpLeft .pageName h3 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+}
+.container .thirdPart .tpLeft h1 {
+  color: #A9111B;
+  font-size: 10rem;
+  margin: 0;
+}
+.container .thirdPart .tpLeft p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  text-align: right;
+}
+.container .thirdPart .tpLeft .checkHere button {
+  background-color: #A9111B;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.container .thirdPart .tpLeft .checkHere button:hover {
+  background-color: white;
+  color: #A9111B;
+}
+.container .thirdPart .tpRight {
+  z-index: 1;
+}
+.container .thirdPart .tpRight video {
+  width: 600px;
+  border-radius: 20px;
+}
+.container .fourthPart {
+  background-color: rgb(13, 13, 13);
+  background: linear-gradient(135deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  padding: 100px;
+  height: 700px;
+}
+.container .fourthPart .design {
+  position: absolute;
+  right: 0px;
+  z-index: 0;
+}
+.container .fourthPart .design img {
+  width: 1320px;
+  opacity: 4%;
+}
+.container .fourthPart .fpLeft {
+  z-index: 1;
+}
+.container .fourthPart .fpLeft video {
+  width: 600px;
+  border-radius: 20px;
+}
+.container .fourthPart .fpRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 600px;
+  z-index: 1;
+  color: white;
+}
+.container .fourthPart .fpRight .pageName {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.container .fourthPart .fpRight .pageName h3 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+}
+.container .fourthPart .fpRight h1 {
+  color: #A9111B;
+  font-size: 10rem;
+  margin: 0;
+}
+.container .fourthPart .fpRight p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+.container .fourthPart .fpRight .checkHere button {
+  background-color: #A9111B;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.container .fourthPart .fpRight .checkHere button:hover {
+  background-color: white;
+  color: #A9111B;
+}
+.container .fifthPart {
+  background-color: rgb(13, 13, 13);
+  background: linear-gradient(45deg, #121212, #010101), url("https://i.pinimg.com/564x/90/9a/d2/909ad238365dbdd7ee088110a24edb39.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  padding: 100px;
+  height: 700px;
+}
+.container .fifthPart .design {
+  position: absolute;
+  left: -50px;
+  /* transform: rotate(360deg); */
+  z-index: 0;
+}
+.container .fifthPart .design img {
+  /* transform: rotate(25deg); */
+  width: 1020px;
+  opacity: 4%;
+}
+.container .fifthPart .ffpLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 600px;
+  z-index: 1;
+  color: white;
+}
+.container .fifthPart .ffpLeft .pageName {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.container .fifthPart .ffpLeft .pageName h3 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+}
+.container .fifthPart .ffpLeft h1 {
+  color: #A9111B;
+  font-size: 10rem;
+  margin: 0;
+}
+.container .fifthPart .ffpLeft p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  text-align: right;
+}
+.container .fifthPart .ffpLeft .checkHere button {
+  background-color: #A9111B;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.container .fifthPart .ffpLeft .checkHere button:hover {
+  background-color: white;
+  color: #A9111B;
+}
+.container .fifthPart .ffpRight {
+  z-index: 1;
+}
+.container .fifthPart .ffpRight video {
+  width: 600px;
+  border-radius: 20px;
+}
 
 /*Breathing Animation */
 @keyframes breathing {
-    0% { 
-        transform: scale(1); 
-        opacity: 1;
-    } 50% { 
-        transform: scale(1.1); 
-        opacity: 0.5;
-    } 100% { 
-        transform: scale(1); 
-        opacity: 1;
-    }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
-
 @keyframes scroll {
-    0%, 100% {
-        height: 2px;
-        transform: translateY(0);
-    } 10%, 20% {
-        height: 8px;
-        transform: translateY(0);
-    } 30%, 40% {
-        height: 2px;
-        transform: translateY(6px);
-        
-    } 50%, 60% {
-        height: 8px;
-        transform: translateY(6px);
-    } 70%, 80% {
-        height: 2px;
-        transform: translateY(12px);
-    }
-    
+  0%, 100% {
+    height: 2px;
+    transform: translateY(0);
+  }
+  10%, 20% {
+    height: 8px;
+    transform: translateY(0);
+  }
+  30%, 40% {
+    height: 2px;
+    transform: translateY(6px);
+  }
+  50%, 60% {
+    height: 8px;
+    transform: translateY(6px);
+  }
+  70%, 80% {
+    height: 2px;
+    transform: translateY(12px);
+  }
 }
-
 @media (max-width: 1024px) {
-    .container{
-
-        .secondPart{
-            height: 500px;
-
-            .design{
-                img{
-                    width: 820px;
-                }
-            }
-
-            .spLeft{
-                img{
-                    width: 300px;
-                }
-            
-            }
-
-            .spRight{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-        }
-
-        .thirdPart{
-            height: 500px;
-
-            .design{
-                img{
-                    width: 620px;
-                }
-            }
-
-            .tpLeft{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-
-            .tpRight{
-                img{
-                    width: 300px;
-                }
-            
-            }
-        }
-
-        .fourthPart{
-            height: 500px;
-
-            .design{
-                img{
-                    width: 820px;
-                }
-            }
-
-            .fpLeft{
-                img{
-                    width: 300px;
-                }
-            
-            }
-
-            .fpRight{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-        }
-
-        .fifthPart{
-            height: 500px;
-
-            .design{
-                img{
-                    width: 820px;
-                }
-            }
-
-            .ffpLeft{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-
-            .ffpRight{
-                img{
-                    width: 300px;
-                }
-            
-            }
-        }
-    }
-
+  .container .secondPart {
+    height: 500px;
+  }
+  .container .secondPart .design img {
+    width: 820px;
+  }
+  .container .secondPart .spLeft video {
+    width: 300px;
+  }
+  .container .secondPart .spRight {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .secondPart .spRight h1 {
+    font-size: 5rem;
+  }
+  .container .secondPart .spRight h3 {
+    font-size: 0.75rem;
+  }
+  .container .secondPart .spRight p {
+    font-size: 0.75rem;
+  }
+  .container .secondPart .spRight .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart {
+    height: 500px;
+  }
+  .container .thirdPart .design img {
+    width: 620px;
+  }
+  .container .thirdPart .tpLeft {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .thirdPart .tpLeft h1 {
+    font-size: 5rem;
+  }
+  .container .thirdPart .tpLeft h3 {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart .tpLeft p {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart .tpLeft .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart .tpRight video {
+    width: 300px;
+  }
+  .container .fourthPart {
+    height: 500px;
+  }
+  .container .fourthPart .design img {
+    width: 820px;
+  }
+  .container .fourthPart .fpLeft video {
+    width: 300px;
+  }
+  .container .fourthPart .fpRight {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .fourthPart .fpRight h1 {
+    font-size: 5rem;
+  }
+  .container .fourthPart .fpRight h3 {
+    font-size: 0.75rem;
+  }
+  .container .fourthPart .fpRight p {
+    font-size: 0.75rem;
+  }
+  .container .fourthPart .fpRight .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart {
+    height: 500px;
+  }
+  .container .fifthPart .design img {
+    width: 820px;
+  }
+  .container .fifthPart .ffpLeft {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .fifthPart .ffpLeft h1 {
+    font-size: 5rem;
+  }
+  .container .fifthPart .ffpLeft h3 {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart .ffpLeft p {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart .ffpLeft .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart .ffpRight video {
+    width: 300px;
+  }
 }
-
 /* For Responsiveness */
 @media (max-width: 768px) {
-    .loader{
-        width: 100vw;
-        .text{
-            font-size: 2rem;
-        }
-    }
-    .container{
-        .topPart{
-            .mainText{
-                h1{
-                    font-size: 5rem;
-                    letter-spacing: 10px;
-                }
-            }
-
-            .red{
-                width: 300px;
-                height: 300px;
-            }
-
-            .scrollMouse{
-                p{
-                    font-size: 0.5rem;
-                }
-            }
-        }
-        .secondPart{
-            height: 800px;
-            flex-direction: column;
-
-            .design{
-                img{
-                    width: 820px;
-                }
-            }
-
-            .spLeft{
-                img{
-                    width: 300px;
-                }
-            
-            }
-
-            .spRight{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-        }
-
-        .thirdPart{
-            height: 800px;
-            flex-direction: column-reverse;
-
-            .design{
-                img{
-                    right: 0;
-                    width: 400px;
-                }
-            }
-
-            .tpLeft{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-
-            .tpRight{
-                img{
-                    width: 300px;
-                }
-            
-            }
-        }
-
-        .fourthPart{
-            height: 800px;
-            flex-direction: column;
-
-            .design{
-                img{
-                    width: 820px;
-                }
-            }
-
-            .fpLeft{
-                img{
-                    width: 300px;
-                }
-            
-            }
-
-            .fpRight{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-        }
-
-        .fifthPart{
-            height: 800px;
-            flex-direction: column-reverse;
-
-            .design{
-                img{
-                    right: 0;
-                    width: 450px;
-                }
-            }
-
-            .ffpLeft{
-                height: fit-content;
-                h1{
-                    font-size: 5rem;
-                }
-
-                h3{
-                    font-size: 0.75rem;
-                }
-
-                p{
-                    font-size: 0.75rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-
-            .ffpRight{
-                img{
-                    width: 300px;
-                }
-            
-            }
-        }
-    }
-    
+  .loader {
+    width: 100vw;
+  }
+  .loader .text {
+    font-size: 2rem;
+  }
+  .container .topPart .mainText h1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+  }
+  .container .topPart .red {
+    width: 300px;
+    height: 300px;
+  }
+  .container .topPart .scrollMouse p {
+    font-size: 0.5rem;
+  }
+  .container .secondPart {
+    height: 800px;
+    flex-direction: column;
+  }
+  .container .secondPart .design img {
+    width: 820px;
+  }
+  .container .secondPart .spLeft video {
+    width: 300px;
+  }
+  .container .secondPart .spRight {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .secondPart .spRight h1 {
+    font-size: 5rem;
+  }
+  .container .secondPart .spRight h3 {
+    font-size: 0.75rem;
+  }
+  .container .secondPart .spRight p {
+    font-size: 0.75rem;
+  }
+  .container .secondPart .spRight .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart {
+    height: 800px;
+    flex-direction: column-reverse;
+  }
+  .container .thirdPart .design img {
+    right: 0;
+    width: 400px;
+  }
+  .container .thirdPart .tpLeft {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .thirdPart .tpLeft h1 {
+    font-size: 5rem;
+  }
+  .container .thirdPart .tpLeft h3 {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart .tpLeft p {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart .tpLeft .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .thirdPart .tpRight video {
+    width: 300px;
+  }
+  .container .fourthPart {
+    height: 800px;
+    flex-direction: column;
+  }
+  .container .fourthPart .design img {
+    width: 820px;
+  }
+  .container .fourthPart .fpLeft video {
+    width: 300px;
+  }
+  .container .fourthPart .fpRight {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .fourthPart .fpRight h1 {
+    font-size: 5rem;
+  }
+  .container .fourthPart .fpRight h3 {
+    font-size: 0.75rem;
+  }
+  .container .fourthPart .fpRight p {
+    font-size: 0.75rem;
+  }
+  .container .fourthPart .fpRight .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart {
+    height: 800px;
+    flex-direction: column-reverse;
+  }
+  .container .fifthPart .design img {
+    right: 0;
+    width: 450px;
+  }
+  .container .fifthPart .ffpLeft {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .fifthPart .ffpLeft h1 {
+    font-size: 5rem;
+  }
+  .container .fifthPart .ffpLeft h3 {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart .ffpLeft p {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart .ffpLeft .checkHere button {
+    font-size: 0.75rem;
+  }
+  .container .fifthPart .ffpRight video {
+    width: 300px;
+  }
 }
-
 @media (max-width: 425px) {
-    .loader{
-        width: 100vw;
-        .text{
-            font-size: 2rem;
-        }
-    }
-    .container{
-        .topPart{
-            .mainText{
-                h1{
-                    font-size: 3rem;
-                    letter-spacing: 5px;
-                }
-            }
-
-            .red{
-                width: 200px;
-                height: 200px;
-            }
-
-            .scrollMouse{
-                p{
-                    font-size: 0.5rem;
-                }
-            }
-        }
-
-        .secondPart{
-            padding: 20px;
-            .design{
-                img{
-                    width: 620px;
-                }
-            }
-
-            .spLeft{
-                img{
-                    width: 200px;
-                }
-            
-            }
-
-            .spRight{
-                h1{
-                    font-size: 2.5rem;
-                }
-
-                h3{
-                    font-size: 0.5rem;
-                }
-
-                p{
-                    font-size: 0.5rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.5rem;
-                    }
-                }
-            }
-        }
-
-        .thirdPart{
-            padding: 20px;
-            .design{
-                img{
-                    width: 250px;
-                    transform: rotate(0deg);
-                }
-            }
-
-            .tpLeft{
-                h1{
-                    font-size: 2.5rem;
-                }
-
-                h3{
-                    font-size: 0.5rem;
-                }
-
-                p{
-                    font-size: 0.5rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.5rem;
-                    }
-                }
-            }
-
-            .tpRight{
-                img{
-                    width: 200px;
-                }
-            
-            }
-        }
-
-        .fourthPart{
-            padding: 20px;
-            .design{
-                img{
-                    width: 320px;
-                }
-            }
-
-            .fpLeft{
-                img{
-                    width: 200px;
-                }
-            
-            }
-
-            .fpRight{
-                h1{
-                    font-size: 2.5rem;
-                }
-
-                h3{
-                    font-size: 0.5rem;
-                }
-
-                p{
-                    font-size: 0.5rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.5rem;
-                    }
-                }
-            }
-        }
-
-        .fifthPart{
-            padding: 20px;
-            .design{
-                img{
-                    max-width: 420px;
-                    width: 300px
-                }
-            }
-
-            .ffpLeft{
-                h1{
-                    font-size: 2.5rem;
-                }
-
-                h3{
-                    font-size: 0.5rem;
-                }
-
-                p{
-                    font-size: 0.5rem;
-                }
-
-                .checkHere{
-                    button{
-                        font-size: 0.5rem;
-                    }
-                }
-            }
-
-            .ffpRight{
-                img{
-                    width: 200px;
-                }
-            
-            }
-        }
-    }
-}
+  .loader {
+    width: 100vw;
+  }
+  .loader .text {
+    font-size: 2rem;
+  }
+  .container .topPart .mainText h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+  .container .topPart .red {
+    width: 200px;
+    height: 200px;
+  }
+  .container .topPart .scrollMouse p {
+    font-size: 0.5rem;
+  }
+  .container .secondPart {
+    padding: 20px;
+  }
+  .container .secondPart .design img {
+    width: 620px;
+  }
+  .container .secondPart .spLeft video {
+    width: 200px;
+  }
+  .container .secondPart .spRight h1 {
+    font-size: 2.5rem;
+  }
+  .container .secondPart .spRight h3 {
+    font-size: 0.5rem;
+  }
+  .container .secondPart .spRight p {
+    font-size: 0.5rem;
+  }
+  .container .secondPart .spRight .checkHere button {
+    font-size: 0.5rem;
+  }
+  .container .thirdPart {
+    padding: 20px;
+  }
+  .container .thirdPart .design img {
+    width: 250px;
+    transform: rotate(0deg);
+  }
+  .container .thirdPart .tpLeft h1 {
+    font-size: 2.5rem;
+  }
+  .container .thirdPart .tpLeft h3 {
+    font-size: 0.5rem;
+  }
+  .container .thirdPart .tpLeft p {
+    font-size: 0.5rem;
+  }
+  .container .thirdPart .tpLeft .checkHere button {
+    font-size: 0.5rem;
+  }
+  .container .thirdPart .tpRight video {
+    width: 200px;
+  }
+  .container .fourthPart {
+    padding: 20px;
+  }
+  .container .fourthPart .design img {
+    width: 320px;
+  }
+  .container .fourthPart .fpLeft video {
+    width: 200px;
+  }
+  .container .fourthPart .fpRight h1 {
+    font-size: 2.5rem;
+  }
+  .container .fourthPart .fpRight h3 {
+    font-size: 0.5rem;
+  }
+  .container .fourthPart .fpRight p {
+    font-size: 0.5rem;
+  }
+  .container .fourthPart .fpRight .checkHere button {
+    font-size: 0.5rem;
+  }
+  .container .fifthPart {
+    padding: 20px;
+  }
+  .container .fifthPart .design img {
+    max-width: 420px;
+    width: 300px;
+  }
+  .container .fifthPart .ffpLeft h1 {
+    font-size: 2.5rem;
+  }
+  .container .fifthPart .ffpLeft h3 {
+    font-size: 0.5rem;
+  }
+  .container .fifthPart .ffpLeft p {
+    font-size: 0.5rem;
+  }
+  .container .fifthPart .ffpLeft .checkHere button {
+    font-size: 0.5rem;
+  }
+  .container .fifthPart .ffpRight video {
+    width: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */

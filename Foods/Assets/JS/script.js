@@ -119,7 +119,7 @@ ramen.addEventListener('click', () => {
     foodDesc.style.opacity = '0';
     
     setTimeout(() => { 
-        imageWindow.src = './Assets/Images/ramen1.png';
+        imageWindow.src = './Assets/images/ramen1.png';
         setTimeout(() => {
             imageWindow.style.opacity = '1';
             foodName.textContent = 'Ramen';
@@ -140,7 +140,7 @@ tempura.addEventListener('click', () => {
     foodDesc.style.opacity = '0';
     
     setTimeout(() => {
-        imageWindow.src = './Assets/Images/tempura.png';
+        imageWindow.src = './Assets/images/tempura.png';
         setTimeout(() => {
             foodName.textContent = 'Tempura';
             foodJapName.textContent = '天ぷら';
@@ -160,7 +160,7 @@ takoyaki.addEventListener('click', () => {
     foodDesc.style.opacity = '0';
 
     setTimeout(() => {
-        imageWindow.src = 'Assets/Images/takoyaki.png';
+        imageWindow.src = './Assets/images/takoyaki.png';
         foodName.textContent = 'Takoyaki';
         foodJapName.textContent = 'たこ焼き';
         foodDesc.textContent = 'Takoyaki is a ball-shaped Japanese snack made of a wheat flour-based batter and typically filled with minced or diced octopus, tempura scraps, pickled ginger, and green onion. Takoyaki are brushed with takoyaki sauce, similar to Worcestershire sauce, and mayonnaise. The takoyaki is then sprinkled with green laver and shavings of dried bonito.';
@@ -180,7 +180,7 @@ udon.addEventListener('click', () => {
     foodDesc.style.opacity = '0';
 
     setTimeout(() => {
-        imageWindow.src = 'Assets/Images/udon.png';
+        imageWindow.src = './Assets/images/udon.png';
         foodName.textContent = 'Udon';
         foodJapName.textContent = 'うどん';
         foodDesc.textContent = 'Udon is a type of thick wheat noodle used frequently in Japanese cuisine. It is often served hot as a noodle soup in its simplest form, as kake udon, in a mildly flavoured broth called kakejiru, which is made of dashi, soy sauce, and mirin. It is usually topped with thinly chopped scallions.';
