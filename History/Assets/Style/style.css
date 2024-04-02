@@ -470,7 +470,7 @@ body {
   .parallax .header {
     top: 50px;
     left: 220px;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .parallax .parallax-background, .parallax .parallax-background-dojo {
     top: 10px;
@@ -528,8 +528,8 @@ body {
 @media (max-width: 375px) {
   .parallax .header {
     top: 50px;
-    left: 180px;
-    font-size: 1.5rem;
+    left: 170px;
+    font-size: 1rem;
   }
   .parallax .parallax-background, .parallax .parallax-background-dojo {
     top: 10px;

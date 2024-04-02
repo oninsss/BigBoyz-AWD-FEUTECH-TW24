@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #010101;
   color: #F5F5F5;
   overflow-x: hidden;
   min-width: 100%;
@@ -494,4 +494,4 @@ body {
   #_mapModal {
     width: 200px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
